@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2017-01-05 Thu 11:46 -->
+<!-- 2017-01-05 Thu 12:59 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="viewport" content="width=device-width, initial-scale=1" />
 <title>Sen's Language Playground</title>
@@ -256,27 +256,33 @@ for the JavaScript code in this tag.
 </li>
 </ul>
 </li>
-<li><a href="#orgheadline66">4. JavaScript Family</a>
+<li><a href="#orgheadline69">4. JavaScript</a>
 <ul>
 <li><a href="#orgheadline61">4.1. Family Tree</a></li>
-<li><a href="#orgheadline65">4.2. Features</a>
+<li><a href="#orgheadline66">4.2. Features</a>
 <ul>
-<li><a href="#orgheadline64">4.2.1. Block Bindings</a></li>
+<li><a href="#orgheadline64">4.2.1. Variable Declarations</a></li>
+<li><a href="#orgheadline65">4.2.2. Functions</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline68">4.3. Tricks</a>
+<ul>
+<li><a href="#orgheadline67">4.3.1. Use <code>||</code> to check for <code>undefined</code></a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgheadline77">5. Others</a>
+<li><a href="#orgheadline80">5. Others</a>
 <ul>
-<li><a href="#orgheadline74">5.1. Emacs</a>
+<li><a href="#orgheadline77">5.1. Emacs</a>
 <ul>
-<li><a href="#orgheadline71">5.1.1. General</a></li>
-<li><a href="#orgheadline72">5.1.2. Org-mode</a></li>
-<li><a href="#orgheadline73">5.1.3. Auctex</a></li>
+<li><a href="#orgheadline74">5.1.1. General</a></li>
+<li><a href="#orgheadline75">5.1.2. Org-mode</a></li>
+<li><a href="#orgheadline76">5.1.3. Auctex</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline75">5.2. Bash</a></li>
-<li><a href="#orgheadline76">5.3. Software Installation</a></li>
+<li><a href="#orgheadline78">5.2. Bash</a></li>
+<li><a href="#orgheadline79">5.3. Software Installation</a></li>
 </ul>
 </li>
 </ul>
@@ -1191,10 +1197,17 @@ assert<span style="color: #3a81c3;">(</span> <span style="color: #4e3163;">!</sp
 </div>
 </div>
 
-<div id="outline-container-orgheadline66" class="outline-2">
-<h2 id="orgheadline66"><span class="section-number-2">4</span> JavaScript Family</h2>
+<div id="outline-container-orgheadline69" class="outline-2">
+<h2 id="orgheadline69"><span class="section-number-2">4</span> JavaScript</h2>
 <div class="outline-text-2" id="text-4">
-</div><div id="outline-container-orgheadline61" class="outline-3">
+<p>
+Materials:
+</p>
+<ul class="org-ul">
+<li>Understanding ECMAScript 6, <a href="https://leanpub.com/understandinges6/read">https://leanpub.com/understandinges6/read</a></li>
+</ul>
+</div>
+<div id="outline-container-orgheadline61" class="outline-3">
 <h3 id="orgheadline61"><span class="section-number-3">4.1</span> Family Tree</h3>
 <div class="outline-text-3" id="text-4-1">
 <dl class="org-dl">
@@ -1202,11 +1215,11 @@ assert<span style="color: #3a81c3;">(</span> <span style="color: #4e3163;">!</sp
 </dl>
 </div>
 </div>
-<div id="outline-container-orgheadline65" class="outline-3">
-<h3 id="orgheadline65"><span class="section-number-3">4.2</span> Features</h3>
+<div id="outline-container-orgheadline66" class="outline-3">
+<h3 id="orgheadline66"><span class="section-number-3">4.2</span> Features</h3>
 <div class="outline-text-3" id="text-4-2">
 </div><div id="outline-container-orgheadline64" class="outline-4">
-<h4 id="orgheadline64"><span class="section-number-4">4.2.1</span> Block Bindings</h4>
+<h4 id="orgheadline64"><span class="section-number-4">4.2.1</span> Variable Declarations</h4>
 <div class="outline-text-4" id="text-4-2-1">
 </div><ol class="org-ol"><li><a id="orgheadline62"></a>Hoisting<br  /><div class="outline-text-5" id="text-4-2-1-1">
 <p>
@@ -1246,41 +1259,72 @@ Variable declarations using <code>var</code> are treated as if they are at the t
 </dl>
 </div></li></ol>
 </div>
+
+<div id="outline-container-orgheadline65" class="outline-4">
+<h4 id="orgheadline65"><span class="section-number-4">4.2.2</span> Functions</h4>
+<div class="outline-text-4" id="text-4-2-2">
+<ul class="org-ul">
+<li>Functions in JS allow any number of parameters to be passed, regardless of the number of parameters declared in the function definition.</li>
+</ul>
 </div>
 </div>
+</div>
 
+<div id="outline-container-orgheadline68" class="outline-3">
+<h3 id="orgheadline68"><span class="section-number-3">4.3</span> Tricks</h3>
+<div class="outline-text-3" id="text-4-3">
+</div><div id="outline-container-orgheadline67" class="outline-4">
+<h4 id="orgheadline67"><span class="section-number-4">4.3.1</span> Use <code>||</code> to check for <code>undefined</code></h4>
+<div class="outline-text-4" id="text-4-3-1">
+<p>
+The logical OR operator (||) always returns the second operand when the first is falsy.
+</p>
+<div class="org-src-container">
 
+<pre class="src src-javascript"><span style="color: #2aa1ae; background-color: #ecf3ec;">// </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Rather than</span>
+<span style="color: #3a81c3; font-weight: bold;">if</span><span style="color: #3a81c3;">(</span>msg<span style="color: #3a81c3;">){</span>
+    console.log<span style="color: #6c3163;">(</span>msg<span style="color: #6c3163;">)</span>;
+<span style="color: #3a81c3;">}</span><span style="color: #3a81c3; font-weight: bold;">else</span><span style="color: #3a81c3;">{</span>
+    console.log<span style="color: #6c3163;">(</span><span style="color: #2d9574;">'empty'</span><span style="color: #6c3163;">)</span>;
+<span style="color: #3a81c3;">}</span>
+<span style="color: #2aa1ae; background-color: #ecf3ec;">// </span><span style="color: #2aa1ae; background-color: #ecf3ec;">use || to check if a variable is defined.</span>
+console.log<span style="color: #3a81c3;">(</span>msg || <span style="color: #2d9574;">'empty'</span><span style="color: #3a81c3;">)</span>;
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-
-<div id="outline-container-orgheadline77" class="outline-2">
-<h2 id="orgheadline77"><span class="section-number-2">5</span> Others</h2>
+<div id="outline-container-orgheadline80" class="outline-2">
+<h2 id="orgheadline80"><span class="section-number-2">5</span> Others</h2>
 <div class="outline-text-2" id="text-5">
-</div><div id="outline-container-orgheadline74" class="outline-3">
-<h3 id="orgheadline74"><span class="section-number-3">5.1</span> Emacs</h3>
+</div><div id="outline-container-orgheadline77" class="outline-3">
+<h3 id="orgheadline77"><span class="section-number-3">5.1</span> Emacs</h3>
 <div class="outline-text-3" id="text-5-1">
-</div><div id="outline-container-orgheadline71" class="outline-4">
-<h4 id="orgheadline71"><span class="section-number-4">5.1.1</span> General</h4>
+</div><div id="outline-container-orgheadline74" class="outline-4">
+<h4 id="orgheadline74"><span class="section-number-4">5.1.1</span> General</h4>
 <div class="outline-text-4" id="text-5-1-1">
-</div><ol class="org-ol"><li><a id="orgheadline67"></a>Modifier keys:<br  /><div class="outline-text-5" id="text-5-1-1-1">
+</div><ol class="org-ol"><li><a id="orgheadline70"></a>Modifier keys:<br  /><div class="outline-text-5" id="text-5-1-1-1">
 <ul class="org-ul">
 <li>C: Control; ⌃</li>
 <li>M: Meta; Alt; Option.⌥</li>
 </ul>
 </div></li>
-<li><a id="orgheadline68"></a>Cut and paste rectangle region<br  /><div class="outline-text-5" id="text-5-1-1-2">
+<li><a id="orgheadline71"></a>Cut and paste rectangle region<br  /><div class="outline-text-5" id="text-5-1-1-2">
 <ul class="org-ul">
 <li><code>C-x r k</code>: <code>kill-rectangle</code>, cut</li>
 <li><code>C-x r y</code>: <code>yank-rectangle</code>; paste. (be careful with the target lines)</li>
 </ul>
 </div></li>
-<li><a id="orgheadline69"></a>Search and replace<br  /><div class="outline-text-5" id="text-5-1-1-3">
+<li><a id="orgheadline72"></a>Search and replace<br  /><div class="outline-text-5" id="text-5-1-1-3">
 <ul class="org-ul">
 <li><code>C-s</code>: <code>isearch-forward</code>; incremental search forward</li>
 <li><code>C-r</code>: <code>isearch-backward</code>; incremental search forward</li>
 <li>Repeat <code>C-s</code> or <code>C-r</code> to move to the next or previous match.</li>
 </ul>
 </div></li>
-<li><a id="orgheadline70"></a>Moving cursor<br  /><div class="outline-text-5" id="text-5-1-1-4">
+<li><a id="orgheadline73"></a>Moving cursor<br  /><div class="outline-text-5" id="text-5-1-1-4">
 <ul class="org-ul">
 <li><code>CM-n</code>: Move cursor to the next parentheses group.</li>
 <li><code>CM-p</code>: Move cursor to the previous parentheses group.</li>
@@ -1288,8 +1332,8 @@ Variable declarations using <code>var</code> are treated as if they are at the t
 </div></li></ol>
 </div>
 
-<div id="outline-container-orgheadline72" class="outline-4">
-<h4 id="orgheadline72"><span class="section-number-4">5.1.2</span> Org-mode</h4>
+<div id="outline-container-orgheadline75" class="outline-4">
+<h4 id="orgheadline75"><span class="section-number-4">5.1.2</span> Org-mode</h4>
 <div class="outline-text-4" id="text-5-1-2">
 <ul class="org-ul">
 <li><code>C-ce hh</code>: Export to html file</li>
@@ -1303,8 +1347,8 @@ Variable declarations using <code>var</code> are treated as if they are at the t
 </div>
 </div>
 
-<div id="outline-container-orgheadline73" class="outline-4">
-<h4 id="orgheadline73"><span class="section-number-4">5.1.3</span> Auctex</h4>
+<div id="outline-container-orgheadline76" class="outline-4">
+<h4 id="orgheadline76"><span class="section-number-4">5.1.3</span> Auctex</h4>
 <div class="outline-text-4" id="text-5-1-3">
 <ul class="org-ul">
 <li>Preview: <code>C-cpd</code></li>
@@ -1315,8 +1359,8 @@ Variable declarations using <code>var</code> are treated as if they are at the t
 </div>
 
 
-<div id="outline-container-orgheadline75" class="outline-3">
-<h3 id="orgheadline75"><span class="section-number-3">5.2</span> Bash</h3>
+<div id="outline-container-orgheadline78" class="outline-3">
+<h3 id="orgheadline78"><span class="section-number-3">5.2</span> Bash</h3>
 <div class="outline-text-3" id="text-5-2">
 <ul class="org-ul">
 <li><code>pgrep keywords</code>: grep search by process name</li>
@@ -1324,8 +1368,8 @@ Variable declarations using <code>var</code> are treated as if they are at the t
 </div>
 </div>
 
-<div id="outline-container-orgheadline76" class="outline-3">
-<h3 id="orgheadline76"><span class="section-number-3">5.3</span> Software Installation</h3>
+<div id="outline-container-orgheadline79" class="outline-3">
+<h3 id="orgheadline79"><span class="section-number-3">5.3</span> Software Installation</h3>
 <div class="outline-text-3" id="text-5-3">
 <dl class="org-dl">
 <dt>Emacs</dt><dd><code>brew install emacs --HEAD --with-cocoa --with-gnutls --with-imagemagick</code></dd>
@@ -1348,7 +1392,7 @@ ssh-copy-id user@hostname
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Sen Lin</p>
-<p class="date">Created: 2017-01-05 Thu 11:46</p>
+<p class="date">Created: 2017-01-05 Thu 12:59</p>
 <p class="validation"></p>
 </div>
 </body>

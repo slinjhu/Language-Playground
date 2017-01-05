@@ -443,11 +443,13 @@ int main(){
 - ~pip freeze > requirements.txt~ prints out installed packages
 - ~pip install -r requirements.txt~ install packages as specified in the file.
 
-* JavaScript Family
+* JavaScript
+Materials:
+- Understanding ECMAScript 6, [[https://leanpub.com/understandinges6/read]]
 ** Family Tree
 - ECMAScript :: The JavaScript core language features are defined in a standard called ECMA-262. The language defined in this standard is called ECMAScript
 ** Features
-*** Block Bindings
+*** Variable Declarations
 **** Hoisting
 Variable declarations using ~var~ are treated as if they are at the top of the function (or global scope, if declared outside of a function) regardless of where the actual declaration occurs; this is called *hoisting*. 
 #+BEGIN_SRC javascript
@@ -475,8 +477,22 @@ if(false){
   - Must be initialized at declaration
   - A ~const~ declaration prevents modification of the binding and not of the value itself
 
-  
+*** Functions
+- Functions in JS allow any number of parameters to be passed, regardless of the number of parameters declared in the function definition.
 
+** Tricks
+*** Use ~||~ to check for ~undefined~
+The logical OR operator (||) always returns the second operand when the first is falsy.
+#+BEGIN_SRC javascript
+// Rather than
+if(msg){
+    console.log(msg);
+}else{
+    console.log('empty');
+}
+// use || to check if a variable is defined.
+console.log(msg || 'empty');
+#+END_SRC
 
 * Others
 ** Emacs

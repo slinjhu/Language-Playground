@@ -448,6 +448,12 @@ Materials:
 - Understanding ECMAScript 6, [[https://leanpub.com/understandinges6/read]]
 ** Family Tree
 - ECMAScript :: The JavaScript core language features are defined in a standard called ECMA-262. The language defined in this standard is called ECMAScript
+- React.js :: 
+- JSX :: 
+  - JSX is a syntax extension to JavaScript. 
+  - You can embed any JavaScript expression in JSX by wrapping it in curly braces.
+
+
 ** Features
 *** Variable Declarations
 **** Hoisting
@@ -479,6 +485,10 @@ if(false){
 
 *** Functions
 - Functions in JS allow any number of parameters to be passed, regardless of the number of parameters declared in the function definition.
+
+*** Classes
+- Classes introduced in ECMAScript 6 are *syntactical sugar* over JavaScript's existing prototype-based inheritance. 
+- Classes are in fact "special functions"
 
 ** Tricks
 *** Use ~||~ to check for ~undefined~

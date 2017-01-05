@@ -1,4 +1,4 @@
-#+TITLE: Notes
+#+TITLE: Sen's Language Playground
 #+AUTHOR: Sen Lin
 #+SETUPFILE: ./style.org
 #+HTML_HEAD:<base target="_blank">

@@ -280,6 +280,48 @@ class Puppy implements Animal.Dog{}
 
 
 * C++
+** Features
+*** Polymorphism
+
+#+INCLUDE: "./C++/Features/Polymorphism.cpp" src c++
+
+*** ~const~ qualifier
+It is easier to understand if you read the declaration in reversed way. 
+
+- Pointer to a constant variable :: 
+#+BEGIN_SRC c++
+int number1 = 1, number2 = 2;
+const int * p1 = & number1; // A pointer to const int
+p1 = &number2; // You can bind the pointer to another variable
+*p1 = 3; // ERROR: the binded value can NOT be modified.
+#+END_SRC
+
+- Constant pointer to a variable :: 
+#+BEGIN_SRC c++
+int number1 = 1, number2 = 2;
+int * const p1 = & number1; // A const pointer to int
+p1 = &number2; // ERROR: You can NOT bind the const pointer to another variable
+*p1 = 3; // But the binded value can be modified.
+#+END_SRC
+
+- Constant pointer to a constant variable ::
+#+BEGIN_SRC c++
+int number1 = 1, number2 = 2;
+const int * const p1 = & number1; // A const pointer to const int
+p1 = &number2; // ERROR: You can NOT bind the const pointer to another variable
+*p1 = 3; // ERROR: the binded value can NOT be modified.
+#+END_SRC
+
+- Reference is implicitly constant :: You can NOT bind a reference to a different variable once it is declared
+
+- Reference to a constant variable ::
+#+BEGIN_SRC c++
+int number1 = 1, number2 = 2;
+const int & r1 = number1; // A reference to const int
+//r1 = 3; // ERROR: the referenced value can NOT be modified.
+#+END_SRC
+
+
 ** Pitfalls in C++
 Here I record some mistakes that are very easy to make in C++.
 *** Overflow and Underflow
@@ -400,6 +442,40 @@ int main(){
 *** ~pip~
 - ~pip freeze > requirements.txt~ prints out installed packages
 - ~pip install -r requirements.txt~ install packages as specified in the file.
+
+* JavaScript Family
+** Family Tree
+- ECMAScript :: The JavaScript core language features are defined in a standard called ECMA-262. The language defined in this standard is called ECMAScript
+** Features
+*** Block Bindings
+**** Hoisting
+Variable declarations using ~var~ are treated as if they are at the top of the function (or global scope, if declared outside of a function) regardless of where the actual declaration occurs; this is called *hoisting*. 
+#+BEGIN_SRC javascript
+// Declaration of msg is hoisted to here
+if(false){
+    var msg = 'hello';
+    console.log(msg);
+}else{
+    // msg is visible but not initialized. 
+    console.log(msg); // print out "undefined"
+}
+#+END_SRC
+
+**** Comparison of Declarations
+- ~var~ :: 
+  - Scope is hoisted to the top
+  - You can redeclare a variable
+- ~let~ ::
+  - No hoisting; visible within the block
+  - You can *NOT* redeclare a variable using ~let~
+- ~const~ ::
+  - Block-level declaration
+  - No re-declaration
+  - Immutable
+  - Must be initialized at declaration
+  - A ~const~ declaration prevents modification of the binding and not of the value itself
+
+  
 
 
 * Others

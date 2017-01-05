@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2017-01-05 Thu 10:34 -->
+<!-- 2017-01-05 Thu 11:46 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="viewport" content="width=device-width, initial-scale=1" />
 <title>Sen's Language Playground</title>
@@ -214,53 +214,69 @@ for the JavaScript code in this tag.
 <li><a href="#orgheadline36">1.7. Garbage Collection</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline53">2. C++</a>
+<li><a href="#orgheadline56">2. C++</a>
 <ul>
-<li><a href="#orgheadline45">2.1. Pitfalls in C++</a>
+<li><a href="#orgheadline40">2.1. Features</a>
 <ul>
-<li><a href="#orgheadline38">2.1.1. Overflow and Underflow</a></li>
-<li><a href="#orgheadline41">2.1.2. Implicit cast</a></li>
-<li><a href="#orgheadline42">2.1.3. Vector</a></li>
-<li><a href="#orgheadline43">2.1.4. Char</a></li>
-<li><a href="#orgheadline44">2.1.5. Boolean</a></li>
+<li><a href="#orgheadline38">2.1.1. Polymorphism</a></li>
+<li><a href="#orgheadline39">2.1.2. <code>const</code> qualifier</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline48">2.2. Techniques</a>
+<li><a href="#orgheadline48">2.2. Pitfalls in C++</a>
 <ul>
-<li><a href="#orgheadline46">2.2.1. Logical operators</a></li>
-<li><a href="#orgheadline47">2.2.2. Assertion</a></li>
+<li><a href="#orgheadline41">2.2.1. Overflow and Underflow</a></li>
+<li><a href="#orgheadline44">2.2.2. Implicit cast</a></li>
+<li><a href="#orgheadline45">2.2.3. Vector</a></li>
+<li><a href="#orgheadline46">2.2.4. Char</a></li>
+<li><a href="#orgheadline47">2.2.5. Boolean</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline49">2.3. Causes of Segmentation Fault</a></li>
-<li><a href="#orgheadline52">2.4. Templates</a>
+<li><a href="#orgheadline51">2.3. Techniques</a>
 <ul>
-<li><a href="#orgheadline50">2.4.1. File IO</a></li>
-<li><a href="#orgheadline51">2.4.2. Timer</a></li>
+<li><a href="#orgheadline49">2.3.1. Logical operators</a></li>
+<li><a href="#orgheadline50">2.3.2. Assertion</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a href="#orgheadline57">3. Python</a>
+<li><a href="#orgheadline52">2.4. Causes of Segmentation Fault</a></li>
+<li><a href="#orgheadline55">2.5. Templates</a>
 <ul>
-<li><a href="#orgheadline56">3.1. Virtual Environments</a>
-<ul>
-<li><a href="#orgheadline54">3.1.1. <code>virtualenv</code></a></li>
-<li><a href="#orgheadline55">3.1.2. <code>pip</code></a></li>
+<li><a href="#orgheadline53">2.5.1. File IO</a></li>
+<li><a href="#orgheadline54">2.5.2. Timer</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgheadline68">4. Others</a>
+<li><a href="#orgheadline60">3. Python</a>
 <ul>
-<li><a href="#orgheadline65">4.1. Emacs</a>
+<li><a href="#orgheadline59">3.1. Virtual Environments</a>
 <ul>
-<li><a href="#orgheadline62">4.1.1. General</a></li>
-<li><a href="#orgheadline63">4.1.2. Org-mode</a></li>
-<li><a href="#orgheadline64">4.1.3. Auctex</a></li>
+<li><a href="#orgheadline57">3.1.1. <code>virtualenv</code></a></li>
+<li><a href="#orgheadline58">3.1.2. <code>pip</code></a></li>
 </ul>
 </li>
-<li><a href="#orgheadline66">4.2. Bash</a></li>
-<li><a href="#orgheadline67">4.3. Software Installation</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline66">4. JavaScript Family</a>
+<ul>
+<li><a href="#orgheadline61">4.1. Family Tree</a></li>
+<li><a href="#orgheadline65">4.2. Features</a>
+<ul>
+<li><a href="#orgheadline64">4.2.1. Block Bindings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgheadline77">5. Others</a>
+<ul>
+<li><a href="#orgheadline74">5.1. Emacs</a>
+<ul>
+<li><a href="#orgheadline71">5.1.1. General</a></li>
+<li><a href="#orgheadline72">5.1.2. Org-mode</a></li>
+<li><a href="#orgheadline73">5.1.3. Auctex</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline75">5.2. Bash</a></li>
+<li><a href="#orgheadline76">5.3. Software Installation</a></li>
 </ul>
 </li>
 </ul>
@@ -759,19 +775,123 @@ An interface created within class or interface. It is useful to group related in
 </div>
 
 
-<div id="outline-container-orgheadline53" class="outline-2">
-<h2 id="orgheadline53"><span class="section-number-2">2</span> C++</h2>
+<div id="outline-container-orgheadline56" class="outline-2">
+<h2 id="orgheadline56"><span class="section-number-2">2</span> C++</h2>
 <div class="outline-text-2" id="text-2">
-</div><div id="outline-container-orgheadline45" class="outline-3">
-<h3 id="orgheadline45"><span class="section-number-3">2.1</span> Pitfalls in C++</h3>
+</div><div id="outline-container-orgheadline40" class="outline-3">
+<h3 id="orgheadline40"><span class="section-number-3">2.1</span> Features</h3>
 <div class="outline-text-3" id="text-2-1">
+</div><div id="outline-container-orgheadline38" class="outline-4">
+<h4 id="orgheadline38"><span class="section-number-4">2.1.1</span> Polymorphism</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<div class="org-src-container">
+
+<pre class="src src-c++"><span style="color: #6c3163;">#include</span><span style="color: #2d9574;">&lt;iostream&gt;</span>
+<span style="color: #3a81c3; font-weight: bold;">using</span> <span style="color: #3a81c3; font-weight: bold;">namespace</span> <span style="color: #4e3163;">std</span>;
+
+<span style="color: #3a81c3; font-weight: bold;">class</span> <span style="color: #ba2f59; font-weight: bold;">Animal</span><span style="color: #3a81c3;">{</span>
+<span style="color: #3a81c3; font-weight: bold;">public</span>:
+  <span style="color: #3a81c3; font-weight: bold;">virtual</span> <span style="color: #ba2f59; font-weight: bold;">void</span> <span style="color: #6c3163; font-weight: bold;">say</span><span style="color: #6c3163;">(){</span>cout &lt;&lt; <span style="color: #2d9574;">"Sound\n"</span>;<span style="color: #6c3163;">}</span>
+<span style="color: #3a81c3;">}</span>;
+
+<span style="color: #3a81c3; font-weight: bold;">class</span> <span style="color: #ba2f59; font-weight: bold;">Cat</span> : <span style="color: #3a81c3; font-weight: bold;">public</span> <span style="color: #ba2f59; font-weight: bold;">Animal</span><span style="color: #3a81c3;">{</span>
+<span style="color: #3a81c3; font-weight: bold;">public</span>:
+  <span style="color: #ba2f59; font-weight: bold;">void</span> <span style="color: #6c3163; font-weight: bold;">say</span><span style="color: #6c3163;">(){</span>cout &lt;&lt; <span style="color: #2d9574;">"Meow\n"</span>;<span style="color: #6c3163;">}</span>
+<span style="color: #3a81c3;">}</span>;
+
+<span style="color: #3a81c3; font-weight: bold;">class</span> <span style="color: #ba2f59; font-weight: bold;">Dog</span> : <span style="color: #3a81c3; font-weight: bold;">public</span> <span style="color: #ba2f59; font-weight: bold;">Animal</span><span style="color: #3a81c3;">{</span>
+<span style="color: #3a81c3; font-weight: bold;">public</span>:
+  <span style="color: #ba2f59; font-weight: bold;">void</span> <span style="color: #6c3163; font-weight: bold;">say</span><span style="color: #6c3163;">(){</span>cout &lt;&lt; <span style="color: #2d9574;">"Bark\n"</span>;<span style="color: #6c3163;">}</span>
+<span style="color: #3a81c3;">}</span>;
+
+<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">main</span><span style="color: #3a81c3;">(){</span>
+  <span style="color: #ba2f59; font-weight: bold;">Animal</span> <span style="color: #715ab1;">cat</span> = Cat<span style="color: #6c3163;">()</span>;
+  <span style="color: #ba2f59; font-weight: bold;">Animal</span> <span style="color: #715ab1;">dog</span> = Dog<span style="color: #6c3163;">()</span>;
+  cat.say<span style="color: #6c3163;">()</span>;
+  dog.say<span style="color: #6c3163;">()</span>;
+
+  <span style="color: #2aa1ae; background-color: #ecf3ec;">// </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Use pointer for polymorphism</span>
+  <span style="color: #ba2f59; font-weight: bold;">Animal</span>* <span style="color: #715ab1;">pcat</span> = <span style="color: #3a81c3; font-weight: bold;">new</span> <span style="color: #ba2f59; font-weight: bold;">Cat</span><span style="color: #6c3163;">()</span>;
+  <span style="color: #ba2f59; font-weight: bold;">Animal</span>* <span style="color: #715ab1;">pdog</span> = <span style="color: #3a81c3; font-weight: bold;">new</span> <span style="color: #ba2f59; font-weight: bold;">Dog</span><span style="color: #6c3163;">()</span>;
+  pcat-&gt;say<span style="color: #6c3163;">()</span>;
+  pdog-&gt;say<span style="color: #6c3163;">()</span>;
+
+<span style="color: #3a81c3;">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline39" class="outline-4">
+<h4 id="orgheadline39"><span class="section-number-4">2.1.2</span> <code>const</code> qualifier</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<p>
+It is easier to understand if you read the declaration in reversed way. 
+</p>
+
+<dl class="org-dl">
+<dt>Pointer to a constant variable</dt><dd></dd>
+</dl>
+<div class="org-src-container">
+
+<pre class="src src-c++"><span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">number1</span> = <span style="color: #4e3163;">1</span>, <span style="color: #715ab1;">number2</span> = <span style="color: #4e3163;">2</span>;
+<span style="color: #3a81c3; font-weight: bold;">const</span> <span style="color: #ba2f59; font-weight: bold;">int</span> * <span style="color: #715ab1;">p1</span> = &amp; number1; <span style="color: #2aa1ae; background-color: #ecf3ec;">// </span><span style="color: #2aa1ae; background-color: #ecf3ec;">A pointer to const int</span>
+p1 = &amp;number2; <span style="color: #2aa1ae; background-color: #ecf3ec;">// </span><span style="color: #2aa1ae; background-color: #ecf3ec;">You can bind the pointer to another variable</span>
+*p1 = <span style="color: #4e3163;">3</span>; <span style="color: #2aa1ae; background-color: #ecf3ec;">// </span><span style="color: #2aa1ae; background-color: #ecf3ec;">ERROR: the binded value can NOT be modified.</span>
+</pre>
+</div>
+
+<dl class="org-dl">
+<dt>Constant pointer to a variable</dt><dd></dd>
+</dl>
+<div class="org-src-container">
+
+<pre class="src src-c++"><span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">number1</span> = <span style="color: #4e3163;">1</span>, <span style="color: #715ab1;">number2</span> = <span style="color: #4e3163;">2</span>;
+<span style="color: #ba2f59; font-weight: bold;">int</span> * <span style="color: #3a81c3; font-weight: bold;">const</span> <span style="color: #715ab1;">p1</span> = &amp; number1; <span style="color: #2aa1ae; background-color: #ecf3ec;">// </span><span style="color: #2aa1ae; background-color: #ecf3ec;">A const pointer to int</span>
+p1 = &amp;number2; <span style="color: #2aa1ae; background-color: #ecf3ec;">// </span><span style="color: #2aa1ae; background-color: #ecf3ec;">ERROR: You can NOT bind the const pointer to another variable</span>
+*p1 = <span style="color: #4e3163;">3</span>; <span style="color: #2aa1ae; background-color: #ecf3ec;">// </span><span style="color: #2aa1ae; background-color: #ecf3ec;">But the binded value can be modified.</span>
+</pre>
+</div>
+
+<dl class="org-dl">
+<dt>Constant pointer to a constant variable</dt><dd></dd>
+</dl>
+<div class="org-src-container">
+
+<pre class="src src-c++"><span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">number1</span> = <span style="color: #4e3163;">1</span>, <span style="color: #715ab1;">number2</span> = <span style="color: #4e3163;">2</span>;
+<span style="color: #3a81c3; font-weight: bold;">const</span> <span style="color: #ba2f59; font-weight: bold;">int</span> * <span style="color: #3a81c3; font-weight: bold;">const</span> <span style="color: #715ab1;">p1</span> = &amp; number1; <span style="color: #2aa1ae; background-color: #ecf3ec;">// </span><span style="color: #2aa1ae; background-color: #ecf3ec;">A const pointer to const int</span>
+p1 = &amp;number2; <span style="color: #2aa1ae; background-color: #ecf3ec;">// </span><span style="color: #2aa1ae; background-color: #ecf3ec;">ERROR: You can NOT bind the const pointer to another variable</span>
+*p1 = <span style="color: #4e3163;">3</span>; <span style="color: #2aa1ae; background-color: #ecf3ec;">// </span><span style="color: #2aa1ae; background-color: #ecf3ec;">ERROR: the binded value can NOT be modified.</span>
+</pre>
+</div>
+
+<dl class="org-dl">
+<dt>Reference is implicitly constant</dt><dd>You can NOT bind a reference to a different variable once it is declared</dd>
+
+<dt>Reference to a constant variable</dt><dd></dd>
+</dl>
+<div class="org-src-container">
+
+<pre class="src src-c++"><span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">number1</span> = <span style="color: #4e3163;">1</span>, <span style="color: #715ab1;">number2</span> = <span style="color: #4e3163;">2</span>;
+<span style="color: #3a81c3; font-weight: bold;">const</span> <span style="color: #ba2f59; font-weight: bold;">int</span> &amp; <span style="color: #715ab1;">r1</span> = number1; <span style="color: #2aa1ae; background-color: #ecf3ec;">// </span><span style="color: #2aa1ae; background-color: #ecf3ec;">A reference to const int</span>
+<span style="color: #2aa1ae; background-color: #ecf3ec;">//</span><span style="color: #2aa1ae; background-color: #ecf3ec;">r1 = 3; // ERROR: the referenced value can NOT be modified.</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgheadline48" class="outline-3">
+<h3 id="orgheadline48"><span class="section-number-3">2.2</span> Pitfalls in C++</h3>
+<div class="outline-text-3" id="text-2-2">
 <p>
 Here I record some mistakes that are very easy to make in C++.
 </p>
 </div>
-<div id="outline-container-orgheadline38" class="outline-4">
-<h4 id="orgheadline38"><span class="section-number-4">2.1.1</span> Overflow and Underflow</h4>
-<div class="outline-text-4" id="text-2-1-1">
+<div id="outline-container-orgheadline41" class="outline-4">
+<h4 id="orgheadline41"><span class="section-number-4">2.2.1</span> Overflow and Underflow</h4>
+<div class="outline-text-4" id="text-2-2-1">
 <ul class="org-ul">
 <li>Avoid adding two <code>int</code> number when an easy alternative exists</li>
 </ul>
@@ -792,10 +912,10 @@ Here I record some mistakes that are very easy to make in C++.
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline41" class="outline-4">
-<h4 id="orgheadline41"><span class="section-number-4">2.1.2</span> Implicit cast</h4>
-<div class="outline-text-4" id="text-2-1-2">
-</div><ol class="org-ol"><li><a id="orgheadline39"></a><code>int</code> to <code>unsigned</code><br  /><div class="outline-text-5" id="text-2-1-2-1">
+<div id="outline-container-orgheadline44" class="outline-4">
+<h4 id="orgheadline44"><span class="section-number-4">2.2.2</span> Implicit cast</h4>
+<div class="outline-text-4" id="text-2-2-2">
+</div><ol class="org-ol"><li><a id="orgheadline42"></a><code>int</code> to <code>unsigned</code><br  /><div class="outline-text-5" id="text-2-2-2-1">
 <p>
 A signed number is implicitly cast into unsigned before adding, and it may cause counter-intuitive results: 
 </p>
@@ -823,7 +943,7 @@ A common bug could occur when you want to loop through from the first to the sec
 </div>
 </div></li>
 
-<li><a id="orgheadline40"></a><code>int</code> to <code>bool</code><br  /><div class="outline-text-5" id="text-2-1-2-2">
+<li><a id="orgheadline43"></a><code>int</code> to <code>bool</code><br  /><div class="outline-text-5" id="text-2-2-2-2">
 <p>
 <code>int</code> will be implicitly cast into <code>bool</code>. If you mistakenly type <code>&amp;</code> as <code>&amp;&amp;</code>, then it still compiles but lead to different result.
 </p>
@@ -837,9 +957,9 @@ assert<span style="color: #3a81c3;">(</span><span style="color: #6c3163;">(</spa
 </div></li></ol>
 </div>
 
-<div id="outline-container-orgheadline42" class="outline-4">
-<h4 id="orgheadline42"><span class="section-number-4">2.1.3</span> Vector</h4>
-<div class="outline-text-4" id="text-2-1-3">
+<div id="outline-container-orgheadline45" class="outline-4">
+<h4 id="orgheadline45"><span class="section-number-4">2.2.3</span> Vector</h4>
+<div class="outline-text-4" id="text-2-2-3">
 <ul class="org-ul">
 <li>When initializing a nested vector, <code>{}</code> is NOT the same as <code>{{}}</code>. <code>{}</code> is an empty vector, while <code>{{}}</code> is a size-1 vector containing an empty list.</li>
 <li>It is always easy to forget that vector does NOT check index bound. If you are not confident with the index, use <code>at()</code>.</li>
@@ -868,9 +988,9 @@ assert<span style="color: #3a81c3;">(</span>sub == <span style="color: #ba2f59; 
 </div>
 </div>
 
-<div id="outline-container-orgheadline43" class="outline-4">
-<h4 id="orgheadline43"><span class="section-number-4">2.1.4</span> Char</h4>
-<div class="outline-text-4" id="text-2-1-4">
+<div id="outline-container-orgheadline46" class="outline-4">
+<h4 id="orgheadline46"><span class="section-number-4">2.2.4</span> Char</h4>
+<div class="outline-text-4" id="text-2-2-4">
 <ul class="org-ul">
 <li>In C++ char type is more like integer.</li>
 </ul>
@@ -894,9 +1014,9 @@ assert<span style="color: #3a81c3;">(</span>string<span style="color: #6c3163;">
 </div>
 </div>
 
-<div id="outline-container-orgheadline44" class="outline-4">
-<h4 id="orgheadline44"><span class="section-number-4">2.1.5</span> Boolean</h4>
-<div class="outline-text-4" id="text-2-1-5">
+<div id="outline-container-orgheadline47" class="outline-4">
+<h4 id="orgheadline47"><span class="section-number-4">2.2.5</span> Boolean</h4>
+<div class="outline-text-4" id="text-2-2-5">
 <ul class="org-ul">
 <li>Size of <code>bool</code> is implementation-defined, not specified by the standard. It could be 1 byte instead of 1 bit.</li>
 <li>Use <code>!var</code> to flip a <code>bool</code> variable.</li>
@@ -912,20 +1032,20 @@ assert<span style="color: #3a81c3;">(</span> <span style="color: #4e3163;">!</sp
 </div>
 </div>
 
-<div id="outline-container-orgheadline48" class="outline-3">
-<h3 id="orgheadline48"><span class="section-number-3">2.2</span> Techniques</h3>
-<div class="outline-text-3" id="text-2-2">
-</div><div id="outline-container-orgheadline46" class="outline-4">
-<h4 id="orgheadline46"><span class="section-number-4">2.2.1</span> Logical operators</h4>
-<div class="outline-text-4" id="text-2-2-1">
+<div id="outline-container-orgheadline51" class="outline-3">
+<h3 id="orgheadline51"><span class="section-number-3">2.3</span> Techniques</h3>
+<div class="outline-text-3" id="text-2-3">
+</div><div id="outline-container-orgheadline49" class="outline-4">
+<h4 id="orgheadline49"><span class="section-number-4">2.3.1</span> Logical operators</h4>
+<div class="outline-text-4" id="text-2-3-1">
 <ul class="org-ul">
 <li>There is no logical XOR operator. Use <code>a != b</code> instead. Do NOT use bitwise XOR <code>^</code>.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgheadline47" class="outline-4">
-<h4 id="orgheadline47"><span class="section-number-4">2.2.2</span> Assertion</h4>
-<div class="outline-text-4" id="text-2-2-2">
+<div id="outline-container-orgheadline50" class="outline-4">
+<h4 id="orgheadline50"><span class="section-number-4">2.3.2</span> Assertion</h4>
+<div class="outline-text-4" id="text-2-3-2">
 <ul class="org-ul">
 <li>Use assertion to reveal bugs in the code.</li>
 <li>In production, to improve efficiency define <code>NDEBUG</code> to ignore all assertions.</li>
@@ -943,9 +1063,9 @@ assert<span style="color: #3a81c3;">(</span> <span style="color: #4e3163;">!</sp
 </div>
 </div>
 
-<div id="outline-container-orgheadline49" class="outline-3">
-<h3 id="orgheadline49"><span class="section-number-3">2.3</span> Causes of Segmentation Fault</h3>
-<div class="outline-text-3" id="text-2-3">
+<div id="outline-container-orgheadline52" class="outline-3">
+<h3 id="orgheadline52"><span class="section-number-3">2.4</span> Causes of Segmentation Fault</h3>
+<div class="outline-text-3" id="text-2-4">
 <ul class="org-ul">
 <li>Out-of-range iterator</li>
 <li>Uninitialized pointer</li>
@@ -955,12 +1075,12 @@ assert<span style="color: #3a81c3;">(</span> <span style="color: #4e3163;">!</sp
 </div>
 </div>
 
-<div id="outline-container-orgheadline52" class="outline-3">
-<h3 id="orgheadline52"><span class="section-number-3">2.4</span> Templates</h3>
-<div class="outline-text-3" id="text-2-4">
-</div><div id="outline-container-orgheadline50" class="outline-4">
-<h4 id="orgheadline50"><span class="section-number-4">2.4.1</span> File IO</h4>
-<div class="outline-text-4" id="text-2-4-1">
+<div id="outline-container-orgheadline55" class="outline-3">
+<h3 id="orgheadline55"><span class="section-number-3">2.5</span> Templates</h3>
+<div class="outline-text-3" id="text-2-5">
+</div><div id="outline-container-orgheadline53" class="outline-4">
+<h4 id="orgheadline53"><span class="section-number-4">2.5.1</span> File IO</h4>
+<div class="outline-text-4" id="text-2-5-1">
 <div class="org-src-container">
 
 <pre class="src src-c++"><span style="color: #6c3163;">#include</span><span style="color: #2d9574;">&lt;iostream&gt;</span>
@@ -1006,9 +1126,9 @@ assert<span style="color: #3a81c3;">(</span> <span style="color: #4e3163;">!</sp
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline51" class="outline-4">
-<h4 id="orgheadline51"><span class="section-number-4">2.4.2</span> Timer</h4>
-<div class="outline-text-4" id="text-2-4-2">
+<div id="outline-container-orgheadline54" class="outline-4">
+<h4 id="orgheadline54"><span class="section-number-4">2.5.2</span> Timer</h4>
+<div class="outline-text-4" id="text-2-5-2">
 <div class="org-src-container">
 
 <pre class="src src-c++"><span style="color: #6c3163;">#include</span><span style="color: #2d9574;">&lt;iostream&gt;</span>
@@ -1038,14 +1158,14 @@ assert<span style="color: #3a81c3;">(</span> <span style="color: #4e3163;">!</sp
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline57" class="outline-2">
-<h2 id="orgheadline57"><span class="section-number-2">3</span> Python</h2>
+<div id="outline-container-orgheadline60" class="outline-2">
+<h2 id="orgheadline60"><span class="section-number-2">3</span> Python</h2>
 <div class="outline-text-2" id="text-3">
-</div><div id="outline-container-orgheadline56" class="outline-3">
-<h3 id="orgheadline56"><span class="section-number-3">3.1</span> Virtual Environments</h3>
+</div><div id="outline-container-orgheadline59" class="outline-3">
+<h3 id="orgheadline59"><span class="section-number-3">3.1</span> Virtual Environments</h3>
 <div class="outline-text-3" id="text-3-1">
-</div><div id="outline-container-orgheadline54" class="outline-4">
-<h4 id="orgheadline54"><span class="section-number-4">3.1.1</span> <code>virtualenv</code></h4>
+</div><div id="outline-container-orgheadline57" class="outline-4">
+<h4 id="orgheadline57"><span class="section-number-4">3.1.1</span> <code>virtualenv</code></h4>
 <div class="outline-text-4" id="text-3-1-1">
 <p>
 <code>virtualenv</code> is a tool to create isolated Python environments. 
@@ -1059,8 +1179,8 @@ assert<span style="color: #3a81c3;">(</span> <span style="color: #4e3163;">!</sp
 </div>
 </div>
 
-<div id="outline-container-orgheadline55" class="outline-4">
-<h4 id="orgheadline55"><span class="section-number-4">3.1.2</span> <code>pip</code></h4>
+<div id="outline-container-orgheadline58" class="outline-4">
+<h4 id="orgheadline58"><span class="section-number-4">3.1.2</span> <code>pip</code></h4>
 <div class="outline-text-4" id="text-3-1-2">
 <ul class="org-ul">
 <li><code>pip freeze &gt; requirements.txt</code> prints out installed packages</li>
@@ -1071,36 +1191,96 @@ assert<span style="color: #3a81c3;">(</span> <span style="color: #4e3163;">!</sp
 </div>
 </div>
 
-
-<div id="outline-container-orgheadline68" class="outline-2">
-<h2 id="orgheadline68"><span class="section-number-2">4</span> Others</h2>
+<div id="outline-container-orgheadline66" class="outline-2">
+<h2 id="orgheadline66"><span class="section-number-2">4</span> JavaScript Family</h2>
 <div class="outline-text-2" id="text-4">
-</div><div id="outline-container-orgheadline65" class="outline-3">
-<h3 id="orgheadline65"><span class="section-number-3">4.1</span> Emacs</h3>
+</div><div id="outline-container-orgheadline61" class="outline-3">
+<h3 id="orgheadline61"><span class="section-number-3">4.1</span> Family Tree</h3>
 <div class="outline-text-3" id="text-4-1">
-</div><div id="outline-container-orgheadline62" class="outline-4">
-<h4 id="orgheadline62"><span class="section-number-4">4.1.1</span> General</h4>
-<div class="outline-text-4" id="text-4-1-1">
-</div><ol class="org-ol"><li><a id="orgheadline58"></a>Modifier keys:<br  /><div class="outline-text-5" id="text-4-1-1-1">
+<dl class="org-dl">
+<dt>ECMAScript</dt><dd>The JavaScript core language features are defined in a standard called ECMA-262. The language defined in this standard is called ECMAScript</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-orgheadline65" class="outline-3">
+<h3 id="orgheadline65"><span class="section-number-3">4.2</span> Features</h3>
+<div class="outline-text-3" id="text-4-2">
+</div><div id="outline-container-orgheadline64" class="outline-4">
+<h4 id="orgheadline64"><span class="section-number-4">4.2.1</span> Block Bindings</h4>
+<div class="outline-text-4" id="text-4-2-1">
+</div><ol class="org-ol"><li><a id="orgheadline62"></a>Hoisting<br  /><div class="outline-text-5" id="text-4-2-1-1">
+<p>
+Variable declarations using <code>var</code> are treated as if they are at the top of the function (or global scope, if declared outside of a function) regardless of where the actual declaration occurs; this is called <b>hoisting</b>. 
+</p>
+<div class="org-src-container">
+
+<pre class="src src-javascript"><span style="color: #2aa1ae; background-color: #ecf3ec;">// </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Declaration of msg is hoisted to here</span>
+<span style="color: #3a81c3; font-weight: bold;">if</span><span style="color: #3a81c3;">(</span><span style="color: #4e3163;">false</span><span style="color: #3a81c3;">){</span>
+    <span style="color: #3a81c3; font-weight: bold;">var</span> <span style="color: #715ab1;">msg</span> = <span style="color: #2d9574;">'hello'</span>;
+    console.log<span style="color: #6c3163;">(</span>msg<span style="color: #6c3163;">)</span>;
+<span style="color: #3a81c3;">}</span><span style="color: #3a81c3; font-weight: bold;">else</span><span style="color: #3a81c3;">{</span>
+    <span style="color: #2aa1ae; background-color: #ecf3ec;">// </span><span style="color: #2aa1ae; background-color: #ecf3ec;">msg is visible but not initialized. </span>
+    console.log<span style="color: #6c3163;">(</span>msg<span style="color: #6c3163;">)</span>; <span style="color: #2aa1ae; background-color: #ecf3ec;">// </span><span style="color: #2aa1ae; background-color: #ecf3ec;">print out "undefined"</span>
+<span style="color: #3a81c3;">}</span>
+</pre>
+</div>
+</div></li>
+
+<li><a id="orgheadline63"></a>Comparison of Declarations<br  /><div class="outline-text-5" id="text-4-2-1-2">
+<dl class="org-dl">
+<dt><code>var</code></dt><dd><ul class="org-ul">
+<li>Scope is hoisted to the top</li>
+<li>You can redeclare a variable</li>
+</ul></dd>
+<dt><code>let</code></dt><dd><ul class="org-ul">
+<li>No hoisting; visible within the block</li>
+<li>You can <b>NOT</b> redeclare a variable using <code>let</code></li>
+</ul></dd>
+<dt><code>const</code></dt><dd><ul class="org-ul">
+<li>Block-level declaration</li>
+<li>No re-declaration</li>
+<li>Immutable</li>
+<li>Must be initialized at declaration</li>
+<li>A <code>const</code> declaration prevents modification of the binding and not of the value itself</li>
+</ul></dd>
+</dl>
+</div></li></ol>
+</div>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-orgheadline77" class="outline-2">
+<h2 id="orgheadline77"><span class="section-number-2">5</span> Others</h2>
+<div class="outline-text-2" id="text-5">
+</div><div id="outline-container-orgheadline74" class="outline-3">
+<h3 id="orgheadline74"><span class="section-number-3">5.1</span> Emacs</h3>
+<div class="outline-text-3" id="text-5-1">
+</div><div id="outline-container-orgheadline71" class="outline-4">
+<h4 id="orgheadline71"><span class="section-number-4">5.1.1</span> General</h4>
+<div class="outline-text-4" id="text-5-1-1">
+</div><ol class="org-ol"><li><a id="orgheadline67"></a>Modifier keys:<br  /><div class="outline-text-5" id="text-5-1-1-1">
 <ul class="org-ul">
 <li>C: Control; ⌃</li>
 <li>M: Meta; Alt; Option.⌥</li>
 </ul>
 </div></li>
-<li><a id="orgheadline59"></a>Cut and paste rectangle region<br  /><div class="outline-text-5" id="text-4-1-1-2">
+<li><a id="orgheadline68"></a>Cut and paste rectangle region<br  /><div class="outline-text-5" id="text-5-1-1-2">
 <ul class="org-ul">
 <li><code>C-x r k</code>: <code>kill-rectangle</code>, cut</li>
 <li><code>C-x r y</code>: <code>yank-rectangle</code>; paste. (be careful with the target lines)</li>
 </ul>
 </div></li>
-<li><a id="orgheadline60"></a>Search and replace<br  /><div class="outline-text-5" id="text-4-1-1-3">
+<li><a id="orgheadline69"></a>Search and replace<br  /><div class="outline-text-5" id="text-5-1-1-3">
 <ul class="org-ul">
 <li><code>C-s</code>: <code>isearch-forward</code>; incremental search forward</li>
 <li><code>C-r</code>: <code>isearch-backward</code>; incremental search forward</li>
 <li>Repeat <code>C-s</code> or <code>C-r</code> to move to the next or previous match.</li>
 </ul>
 </div></li>
-<li><a id="orgheadline61"></a>Moving cursor<br  /><div class="outline-text-5" id="text-4-1-1-4">
+<li><a id="orgheadline70"></a>Moving cursor<br  /><div class="outline-text-5" id="text-5-1-1-4">
 <ul class="org-ul">
 <li><code>CM-n</code>: Move cursor to the next parentheses group.</li>
 <li><code>CM-p</code>: Move cursor to the previous parentheses group.</li>
@@ -1108,9 +1288,9 @@ assert<span style="color: #3a81c3;">(</span> <span style="color: #4e3163;">!</sp
 </div></li></ol>
 </div>
 
-<div id="outline-container-orgheadline63" class="outline-4">
-<h4 id="orgheadline63"><span class="section-number-4">4.1.2</span> Org-mode</h4>
-<div class="outline-text-4" id="text-4-1-2">
+<div id="outline-container-orgheadline72" class="outline-4">
+<h4 id="orgheadline72"><span class="section-number-4">5.1.2</span> Org-mode</h4>
+<div class="outline-text-4" id="text-5-1-2">
 <ul class="org-ul">
 <li><code>C-ce hh</code>: Export to html file</li>
 <li><code>C-cxl</code>: Toggle latex mask</li>
@@ -1123,9 +1303,9 @@ assert<span style="color: #3a81c3;">(</span> <span style="color: #4e3163;">!</sp
 </div>
 </div>
 
-<div id="outline-container-orgheadline64" class="outline-4">
-<h4 id="orgheadline64"><span class="section-number-4">4.1.3</span> Auctex</h4>
-<div class="outline-text-4" id="text-4-1-3">
+<div id="outline-container-orgheadline73" class="outline-4">
+<h4 id="orgheadline73"><span class="section-number-4">5.1.3</span> Auctex</h4>
+<div class="outline-text-4" id="text-5-1-3">
 <ul class="org-ul">
 <li>Preview: <code>C-cpd</code></li>
 <li>Remove preview: <code>C-cpcd</code></li>
@@ -1135,18 +1315,18 @@ assert<span style="color: #3a81c3;">(</span> <span style="color: #4e3163;">!</sp
 </div>
 
 
-<div id="outline-container-orgheadline66" class="outline-3">
-<h3 id="orgheadline66"><span class="section-number-3">4.2</span> Bash</h3>
-<div class="outline-text-3" id="text-4-2">
+<div id="outline-container-orgheadline75" class="outline-3">
+<h3 id="orgheadline75"><span class="section-number-3">5.2</span> Bash</h3>
+<div class="outline-text-3" id="text-5-2">
 <ul class="org-ul">
 <li><code>pgrep keywords</code>: grep search by process name</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgheadline67" class="outline-3">
-<h3 id="orgheadline67"><span class="section-number-3">4.3</span> Software Installation</h3>
-<div class="outline-text-3" id="text-4-3">
+<div id="outline-container-orgheadline76" class="outline-3">
+<h3 id="orgheadline76"><span class="section-number-3">5.3</span> Software Installation</h3>
+<div class="outline-text-3" id="text-5-3">
 <dl class="org-dl">
 <dt>Emacs</dt><dd><code>brew install emacs --HEAD --with-cocoa --with-gnutls --with-imagemagick</code></dd>
 </dl>
@@ -1168,7 +1348,7 @@ ssh-copy-id user@hostname
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Sen Lin</p>
-<p class="date">Created: 2017-01-05 Thu 10:34</p>
+<p class="date">Created: 2017-01-05 Thu 11:46</p>
 <p class="validation"></p>
 </div>
 </body>

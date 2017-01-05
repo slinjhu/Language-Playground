@@ -1,0 +1,448 @@
+#+TITLE: Notes
+#+AUTHOR: Sen Lin
+#+SETUPFILE: ./style.org
+#+HTML_HEAD:<base target="_blank">
+
+* Java
+** Java Basics
+*** About Java
+- Platform :: Any hardware or software environment in which a program runs is known as a platform. Java is also a platform since it has its own runtime environment and API. 
+- Types of Java applications :: 
+      - Standalone application: aka desktop or window based application; need to be installed on every machine. 
+      - Web application: an application that runs on the server side and creates dynamic page. 
+      - Enterprise application: is distributed in nature, such as banking applications. 
+      - Mobile application. 
+- JVM (Java Virtual Machine) :: JVM is a specification of an abstract machine that provides runtime environment in which Java bytecode can be executed. 
+[[./figures/Java/JVM.jpg]]
+- JRE (Java Runtime Environment) :: JRE is the implementation of JVM and it provides runtime environment. JRE = JVM + libraries etc.
+- JDK (Java Development Kit) :: JDK = JRE + development tools
+
+*** Variable 
+A variable is name of reserved area allocated in memory.
+*** Three types of variables 
+- local variable: declared inside a method. 
+- instance variable: declared inside a class but outside the method. 
+- static variable: declared as static; cannot be local.
+*** Data types
+ [[./figures/Java/DataType.jpg]]
+
+*** What happens at runtime
+1. Class file
+2. Classloader: a subsystem of JRE that dynamically loads classes into JVM.
+3. Bytecode verifier: the verifier checks that the instructions cannot perform actions that are obviously damaging.
+4. Interpreter
+5. Runtime
+6. Hardware
+
+*** Comparison with C++
+  - Call by value only.
+  - No multiple inheritance
+  - No virtual keyword (all non-static methods are virtual by default)
+  - Supports unsigned right shift ~>>>~ (padding zero for negative numbers)
+  - Single inheritance tree; all classes are children of ~Object~
+  - All values get initialized.
+*** Some keywords
+- ~strictfp~: restricts floating-point calculations to ensure portability.
+
+
+** Object Oriented Java
+*** Inheritance
+- Whenever you create the instance of subclass, an instance of parent class is created implicitly (~super~)
+*** Static keyword
+~static~ is used for memory management mainly. 
+  - *Static variable* can be used to refer the common property of all objects and get memory only once in class area.
+  - *Static method* belongs to the class rather than an object. We cannot override static methods.
+  - *Static block* is executed in class loader
+#+BEGIN_SRC java
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("main");
+    }
+
+    static{System.out.println("Called in class loading, before main()");}
+
+}
+#+END_SRC
+
+*** Instance Initializer block
+#+BEGIN_SRC java
+class SuperClass{
+    SuperClass(){
+        System.out.println("super() called first");
+    }
+}
+
+class SubClass extends SuperClass{
+    SubClass(){
+        System.out.println("Constructor of subclass called after initializer block");
+    }
+
+    {
+        System.out.println("Initializer block called after super()");
+    }
+}
+#+END_SRC
+
+*** Final keyword
+The ~final~ keyword is used to restrict users. 
+- *final variable* is constant and can be initialized directly or in constructor only.
+#+BEGIN_SRC java
+class Student{
+    public final String name;    
+    Student(String name){
+        this.name = name;
+    }
+    
+    static public final String school;
+    static {
+        school = "No.1 middle school";
+    }
+}
+#+END_SRC
+- *final method* cannot be overridden
+- *final class* cannot be extended
+- *final parameter* of a function is constant
+
+*** Runtime polymorphism, or Dynamic method dispatch
+- A call to an overridden method is resolved at runtime rather than compile time.
+- Note that rumtime polymorphism cannot be achieved by data members.
+#+BEGIN_SRC java
+public class A {
+    public static void main(String[] args){
+        // Call subclass method even after up casting
+        Animal cat = new Cat();
+        Animal dog = new Dog();
+        cat.makeSound();
+        dog.makeSound();
+    }
+}
+
+class Animal {
+    void makeSound(){
+        System.out.println("animal sound");
+    }
+}
+
+class Cat extends Animal {
+    void makeSound(){
+        System.out.println("meow");
+    }
+}
+
+class Dog extends Animal {
+    void makeSound(){
+        System.out.println("bark");
+    }
+}
+#+END_SRC
+  
+*** Static binding and dynamic binding
+- Binding: connecting a method call to the method body
+- Static (early) binding: type of the object is determined at compile time by the compiler
+#+BEGIN_SRC java
+public class A {
+    public static void main(String[] args){
+        // Call subclass method even after up casting
+        dynamicBinding(new Cat());
+        dynamicBinding(new Dog());
+    }
+
+    static void dynamicBinding(Animal a){
+        a.makeSound();
+    }
+}
+
+class Animal {
+    void makeSound(){
+        System.out.println("animal sound");
+    }
+}
+
+class Cat extends Animal {
+    void makeSound(){
+        System.out.println("meow");
+    }
+}
+
+class Dog extends Animal {
+    void makeSound(){
+        System.out.println("bark");
+    }
+}
+#+END_SRC
+
+*** *~instanceof~*, type comparison
+- ~instanceof~ compares an instance with a type, and return true if the instance if of the type or can be cast to the type.
+- Before down casting, check the possibility using ~instanceof~
+
+*** Abstraction
+- Abstraction means hiding the implementation details and showing only functionality to users
+*** Interface
+- An interface is a blueprint of a class
+- Interface fields are ~public static final~ by default.
+- Interface methods are ~public abstract~ by default.
+- A Java class can implement multiple interfaces
+- An interface with no number is known as *marker* or *tagger* interface, such as Serializable, Cloneable etc
+
+
+** Data Structures
+*** Array
+Array is fixed size in Java
+#+BEGIN_SRC java
+int a[] = new int[5];
+int b[] = {1,2,3};
+#+END_SRC
+*** Wrapper classes
+- Wrapper class in Java provides the mechanism to convert primitive (~int~) into object (~Integer~) and object into primitive.
+- Autoboxing and unboxing: the automatic conversion of primitive into objects and vise versa
+- All the wrapper classes are immutable (immutable does not mean constant). 
+
+*** String
+- Java ~String~ is like ~char[]~, a sequence of char.
+- ~java.lang.String implements Serializable, Comparable and CharSequence~
+- Java ~String~ is immutable. ~StringBuffer~ is the same as ~String~ except for that it is mutable.
+
+** Exception
+*** Hierarchy of Java Exception classes
+[[./figures/Java/exceptionhierarchy.jpg]]
+*** Types of exceptions
+- Checked exception: the classes that extend ~Throwable~ except ~RuntimeException~ and ~Error~, such at ~IOException~, ~SQLException~
+- Unchecked exception: the classes that extend ~RuntimeException~, such as ~NullPointerException~, ~ArrayIndexOutOfBoundsException~, ~ArithmeticException~. Unchecked exceptions usually mean the programmer made some mistakes.
+- Error: error is irrecoverable, such as ~OutOfMemoryError~, ~AssertionError~, ~VirtualMachineError~
+*** Multiple catch
+- At a time only one Exception is occurred and one catch block is executed
+- All catch blocks must be ordered from most specific to most general
+- ~fianlly~ block is always executed and used for important code such as closing connection
+*** Declaring Exception in overriding a method
+- If the parent method declares no exception, then the overriding method can only declare unchecked exception.
+- If the parent method declares an exception, then the overriding method cannot declare a super-class exception. 
+
+** Nested Classes
+*** Inner class: non-static nested class
+**** Member inner class: a class created within a class and outside method
+In order to instantiate a inner class, you have to instantiate an outer class.
+
+**** Anonymous inner class
+Anonymous inner class should be used if you have to override method temporarily.
+#+BEGIN_SRC java
+class B{
+    void method(){
+        System.out.println("Old method");
+    }
+}
+
+public class A {
+    public static void main(String[] args){
+
+        B b = new B(){
+            void method(){
+                System.out.println("New method");
+            }
+        };
+        b.method();
+    }
+}
+#+END_SRC
+
+**** Local inner class: a class created within a method
+
+
+*** Static nested class
+#+BEGIN_SRC java
+public class A {
+    static class B{
+        void method(){
+            System.out.println("Static inner class");
+        }
+    }    
+    public static void main(String[] args){
+        B b = new B();
+        b.method();
+    }
+}
+#+END_SRC
+
+*** Nested interface
+An interface created within class or interface. It is useful to group related interfaces so that they can be easily maintained.
+#+BEGIN_SRC java
+interface Animal{
+    interface Dog{}
+}
+class Puppy implements Animal.Dog{}
+#+END_SRC
+
+** Multithreading in Java
+- Thread: a lightweight sub-process, a smallest unit of processing.
+- Threads share a common area of memory.
+
+
+** Garbage Collection
+
+
+* C++
+** Pitfalls in C++
+Here I record some mistakes that are very easy to make in C++.
+*** Overflow and Underflow
+- Avoid adding two ~int~ number when an easy alternative exists
+#+BEGIN_SRC c++
+int mid = (left + right) / 2;
+#+END_SRC
+- Avoid decrementing index of ~size_t~ type.
+#+BEGIN_SRC c++
+for(size_t i = 0, j = num.size() - 1; i <= j; ++i, --j){
+  // If num.size() == 1, then the next step j would underflow
+}
+#+END_SRC
+*** Implicit cast
+**** ~int~ to ~unsigned~
+A signed number is implicitly cast into unsigned before adding, and it may cause counter-intuitive results: 
+#+BEGIN_SRC c++
+assert(0U - 1 == -1);
+assert(0U - 1 > 0);
+#+END_SRC
+
+A common bug could occur when you want to loop through from the first to the second last element of a vector. Since ~size()~ is unsigned, and if the vector is empty, the loop will not be skipped.
+#+BEGIN_SRC c++
+vector<int> xx; // Empty
+for(size_t i = 0; i < xx.size() - 1; ++i){
+  // Loop will not stop until i = 4294967295
+}
+
+for(size_t i = 0; i + 1 < xx.size(); ++i){
+  // Loop will be skipped (avoid adding int with unsigned)
+}
+#+END_SRC
+
+**** ~int~ to ~bool~
+~int~ will be implicitly cast into ~bool~. If you mistakenly type ~&~ as ~&&~, then it still compiles but lead to different result.
+#+BEGIN_SRC c++
+int x = 0x0f, y = 0xf0;
+assert((x & y) == 0);
+assert((x && y) == 1);
+#+END_SRC
+
+*** Vector
+- When initializing a nested vector, ~{}~ is NOT the same as ~{{}}~. ~{}~ is an empty vector, while ~{{}}~ is a size-1 vector containing an empty list.
+- It is always easy to forget that vector does NOT check index bound. If you are not confident with the index, use ~at()~.
+#+BEGIN_SRC c++
+vector<int> xx = {0,1};
+try{
+  cout << xx.at(99);
+}catch(out_of_range e){
+  // If out of range, at() will raise exception.
+}
+#+END_SRC
+- C++ does not check iterator bound either. Dereferencing an out-of-range iterator will occur segmentation fault.
+- The input range for a STL algorithm is a close-open range (NOT including the later iterator).
+#+BEGIN_SRC c++
+xx = {0,1,2,3,4};
+vector<int> sub (xx.begin() + 1, xx.begin() + 3);
+assert(sub == vector<int> ({1,2}));
+#+END_SRC
+
+*** Char
+- In C++ char type is more like integer.
+#+BEGIN_SRC c++
+assert( to_string('a') != "a" );
+assert( to_string('a') == "97" );
+#+END_SRC
+
+- Char can be used to index an array syntactically, hiding some serious bugs
+#+BEGIN_SRC c++
+vector<int> xx = {0, 1, 2, 3};
+assert( & xx['1'] != & xx[1] );
+assert(string('1', 65) == "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+#+END_SRC
+
+*** Boolean
+- Size of ~bool~ is implementation-defined, not specified by the standard. It could be 1 byte instead of 1 bit.
+- Use ~!var~ to flip a ~bool~ variable. 
+#+BEGIN_SRC c++
+bool a = false;
+assert( ~a != true );
+assert( !a == true );
+#+END_SRC
+
+** Techniques
+*** Logical operators
+- There is no logical XOR operator. Use ~a != b~ instead. Do NOT use bitwise XOR ~^~.
+*** Assertion
+- Use assertion to reveal bugs in the code. 
+- In production, to improve efficiency define ~NDEBUG~ to ignore all assertions.
+#+BEGIN_SRC c++
+// #define NDEBUG
+#include<assert.h>
+int main(){
+  assert(true);
+}
+#+END_SRC
+
+** Causes of Segmentation Fault
+- Out-of-range iterator
+- Uninitialized pointer
+- ~pop()~ on an empty stack or queue.
+- Infinite function call stack
+
+** Templates
+*** File IO
+#+INCLUDE: "./C++/Basic/fileIO.cpp" src c++
+*** Timer
+#+INCLUDE: "./C++/Basic/timer.cpp" src c++
+* Python
+** Virtual Environments
+*** ~virtualenv~
+~virtualenv~ is a tool to create isolated Python environments. 
+- Go to a folder, create an virtual environment with  ~virtualenv -p /usr/bin/python2.7 envname~
+- Activate it: ~source envname/bin/activate~
+- Use ~python~ or ~pip~ as usual (the versions are specified by the virtual environment)
+- When done, ~deactivate~
+
+*** ~pip~
+- ~pip freeze > requirements.txt~ prints out installed packages
+- ~pip install -r requirements.txt~ install packages as specified in the file.
+
+
+* Others
+** Emacs
+*** General
+**** Modifier keys:
+- C: Control; ⌃
+- M: Meta; Alt; Option.⌥
+**** Cut and paste rectangle region
+- =C-x r k=: ~kill-rectangle~, cut
+- =C-x r y=: ~yank-rectangle~; paste. (be careful with the target lines)
+**** Search and replace
+- =C-s=: ~isearch-forward~; incremental search forward
+- =C-r=: ~isearch-backward~; incremental search forward
+- Repeat =C-s= or =C-r= to move to the next or previous match.
+**** Moving cursor
+- =CM-n=: Move cursor to the next parentheses group. 
+- =CM-p=: Move cursor to the previous parentheses group. 
+
+*** Org-mode
+- =C-ce hh=: Export to html file
+- =C-cxl=: Toggle latex mask
+- =C-c .=: Insert current date
+- =C-ct=: Change status of a TODO task.
+- =C-x ns=: ~org-narrow-to-subtree~
+- =C-c c=: ~org-capture~
+- =C-cl=: Edit link address and content
+
+*** Auctex
+- Preview: =C-cpd=
+- Remove preview: =C-cpcd=
+
+
+** Bash
+- =pgrep keywords=: grep search by process name
+
+** Software Installation
+- Emacs :: ~brew install emacs --HEAD --with-cocoa --with-gnutls --with-imagemagick~ 
+If you prefer a stable version, use ~brew cask install emacs~ to install from a stable binary release.
+- Openmp :: The ~gcc~ that comes with Mac OS does not contain OpenMP, so we need to reinstall it: ~brew reinstall gcc --without-multilib~ Then use the newly installed ~g++-6~ or other later version.
+- Save password for ssh :: 
+#+BEGIN_EXAMPLE
+ssh-keygen
+brew install ssh-copy-id
+ssh-copy-id user@hostname
+#+END_EXAMPLE

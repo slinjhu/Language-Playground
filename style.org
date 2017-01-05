@@ -1,0 +1,16 @@
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./style/htmlize.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./style/bigblow.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./style/hideshow.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./style/main.css"/>
+
+#+HTML_HEAD: <script type="text/javascript" src="./style/jquery-1.12.2.min.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="./style/jquery-ui-1.10.2.min.js"></script>
+
+#+HTML_HEAD: <script type="text/javascript" src="./style/jquery.localscroll-min.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="./style/jquery.scrollTo-1.4.3.1-min.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="./style/jquery.zclip.min.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="./style/bigblow.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="./style/hideshow.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="./style/jquery.stickytableheaders.min.js"></script>
+#+HTML_HEAD: <script type="text/javascript">//$(hsCollapseAll);</script>
+

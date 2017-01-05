@@ -1,0 +1,1175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2017-01-05 Thu 10:22 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="viewport" content="width=device-width, initial-scale=1" />
+<title>Notes</title>
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Sen Lin" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="./style/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="./style/bigblow.css"/>
+<link rel="stylesheet" type="text/css" href="./style/hideshow.css"/>
+<link rel="stylesheet" type="text/css" href="./style/main.css"/>
+<script type="text/javascript" src="./style/jquery-1.12.2.min.js"></script>
+<script type="text/javascript" src="./style/jquery-ui-1.10.2.min.js"></script>
+<script type="text/javascript" src="./style/jquery.localscroll-min.js"></script>
+<script type="text/javascript" src="./style/jquery.scrollTo-1.4.3.1-min.js"></script>
+<script type="text/javascript" src="./style/jquery.zclip.min.js"></script>
+<script type="text/javascript" src="./style/bigblow.js"></script>
+<script type="text/javascript" src="./style/hideshow.js"></script>
+<script type="text/javascript" src="./style/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript">//$(hsCollapseAll);</script>
+<base target="_blank">
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Notes</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgheadline37">1. Java</a>
+<ul>
+<li><a href="#orgheadline8">1.1. Java Basics</a>
+<ul>
+<li><a href="#orgheadline1">1.1.1. About Java</a></li>
+<li><a href="#orgheadline2">1.1.2. Variable</a></li>
+<li><a href="#orgheadline3">1.1.3. Three types of variables</a></li>
+<li><a href="#orgheadline4">1.1.4. Data types</a></li>
+<li><a href="#orgheadline5">1.1.5. What happens at runtime</a></li>
+<li><a href="#orgheadline6">1.1.6. Comparison with C++</a></li>
+<li><a href="#orgheadline7">1.1.7. Some keywords</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline18">1.2. Object Oriented Java</a>
+<ul>
+<li><a href="#orgheadline9">1.2.1. Inheritance</a></li>
+<li><a href="#orgheadline10">1.2.2. Static keyword</a></li>
+<li><a href="#orgheadline11">1.2.3. Instance Initializer block</a></li>
+<li><a href="#orgheadline12">1.2.4. Final keyword</a></li>
+<li><a href="#orgheadline13">1.2.5. Runtime polymorphism, or Dynamic method dispatch</a></li>
+<li><a href="#orgheadline14">1.2.6. Static binding and dynamic binding</a></li>
+<li><a href="#orgheadline15">1.2.7. <b><code>instanceof</code></b>, type comparison</a></li>
+<li><a href="#orgheadline16">1.2.8. Abstraction</a></li>
+<li><a href="#orgheadline17">1.2.9. Interface</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline22">1.3. Data Structures</a>
+<ul>
+<li><a href="#orgheadline19">1.3.1. Array</a></li>
+<li><a href="#orgheadline20">1.3.2. Wrapper classes</a></li>
+<li><a href="#orgheadline21">1.3.3. String</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline27">1.4. Exception</a>
+<ul>
+<li><a href="#orgheadline23">1.4.1. Hierarchy of Java Exception classes</a></li>
+<li><a href="#orgheadline24">1.4.2. Types of exceptions</a></li>
+<li><a href="#orgheadline25">1.4.3. Multiple catch</a></li>
+<li><a href="#orgheadline26">1.4.4. Declaring Exception in overriding a method</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline34">1.5. Nested Classes</a>
+<ul>
+<li><a href="#orgheadline31">1.5.1. Inner class: non-static nested class</a></li>
+<li><a href="#orgheadline32">1.5.2. Static nested class</a></li>
+<li><a href="#orgheadline33">1.5.3. Nested interface</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline35">1.6. Multithreading in Java</a></li>
+<li><a href="#orgheadline36">1.7. Garbage Collection</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline53">2. C++</a>
+<ul>
+<li><a href="#orgheadline45">2.1. Pitfalls in C++</a>
+<ul>
+<li><a href="#orgheadline38">2.1.1. Overflow and Underflow</a></li>
+<li><a href="#orgheadline41">2.1.2. Implicit cast</a></li>
+<li><a href="#orgheadline42">2.1.3. Vector</a></li>
+<li><a href="#orgheadline43">2.1.4. Char</a></li>
+<li><a href="#orgheadline44">2.1.5. Boolean</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline48">2.2. Techniques</a>
+<ul>
+<li><a href="#orgheadline46">2.2.1. Logical operators</a></li>
+<li><a href="#orgheadline47">2.2.2. Assertion</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline49">2.3. Causes of Segmentation Fault</a></li>
+<li><a href="#orgheadline52">2.4. Templates</a>
+<ul>
+<li><a href="#orgheadline50">2.4.1. File IO</a></li>
+<li><a href="#orgheadline51">2.4.2. Timer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgheadline57">3. Python</a>
+<ul>
+<li><a href="#orgheadline56">3.1. Virtual Environments</a>
+<ul>
+<li><a href="#orgheadline54">3.1.1. <code>virtualenv</code></a></li>
+<li><a href="#orgheadline55">3.1.2. <code>pip</code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgheadline68">4. Others</a>
+<ul>
+<li><a href="#orgheadline65">4.1. Emacs</a>
+<ul>
+<li><a href="#orgheadline62">4.1.1. General</a></li>
+<li><a href="#orgheadline63">4.1.2. Org-mode</a></li>
+<li><a href="#orgheadline64">4.1.3. Auctex</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline66">4.2. Bash</a></li>
+<li><a href="#orgheadline67">4.3. Software Installation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline37" class="outline-2">
+<h2 id="orgheadline37"><span class="section-number-2">1</span> Java</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-orgheadline8" class="outline-3">
+<h3 id="orgheadline8"><span class="section-number-3">1.1</span> Java Basics</h3>
+<div class="outline-text-3" id="text-1-1">
+</div><div id="outline-container-orgheadline1" class="outline-4">
+<h4 id="orgheadline1"><span class="section-number-4">1.1.1</span> About Java</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<dl class="org-dl">
+<dt>Platform</dt><dd>Any hardware or software environment in which a program runs is known as a platform. Java is also a platform since it has its own runtime environment and API.</dd>
+<dt>Types of Java applications</dt><dd><ul class="org-ul">
+<li>Standalone application: aka desktop or window based application; need to be installed on every machine.</li>
+<li>Web application: an application that runs on the server side and creates dynamic page.</li>
+<li>Enterprise application: is distributed in nature, such as banking applications.</li>
+<li>Mobile application.</li>
+</ul></dd>
+<dt>JVM (Java Virtual Machine)</dt><dd>JVM is a specification of an abstract machine that provides runtime environment in which Java bytecode can be executed.</dd>
+</dl>
+
+<div class="figure">
+<p><img src="./figures/Java/JVM.jpg" alt="JVM.jpg" />
+</p>
+</div>
+<dl class="org-dl">
+<dt>JRE (Java Runtime Environment)</dt><dd>JRE is the implementation of JVM and it provides runtime environment. JRE = JVM + libraries etc.</dd>
+<dt>JDK (Java Development Kit)</dt><dd>JDK = JRE + development tools</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-orgheadline2" class="outline-4">
+<h4 id="orgheadline2"><span class="section-number-4">1.1.2</span> Variable</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<p>
+A variable is name of reserved area allocated in memory.
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline3" class="outline-4">
+<h4 id="orgheadline3"><span class="section-number-4">1.1.3</span> Three types of variables</h4>
+<div class="outline-text-4" id="text-1-1-3">
+<ul class="org-ul">
+<li>local variable: declared inside a method.</li>
+<li>instance variable: declared inside a class but outside the method.</li>
+<li>static variable: declared as static; cannot be local.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgheadline4" class="outline-4">
+<h4 id="orgheadline4"><span class="section-number-4">1.1.4</span> Data types</h4>
+<div class="outline-text-4" id="text-1-1-4">
+
+<div class="figure">
+<p><img src="./figures/Java/DataType.jpg" alt="DataType.jpg" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline5" class="outline-4">
+<h4 id="orgheadline5"><span class="section-number-4">1.1.5</span> What happens at runtime</h4>
+<div class="outline-text-4" id="text-1-1-5">
+<ol class="org-ol">
+<li>Class file</li>
+<li>Classloader: a subsystem of JRE that dynamically loads classes into JVM.</li>
+<li>Bytecode verifier: the verifier checks that the instructions cannot perform actions that are obviously damaging.</li>
+<li>Interpreter</li>
+<li>Runtime</li>
+<li>Hardware</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgheadline6" class="outline-4">
+<h4 id="orgheadline6"><span class="section-number-4">1.1.6</span> Comparison with C++</h4>
+<div class="outline-text-4" id="text-1-1-6">
+<ul class="org-ul">
+<li>Call by value only.</li>
+<li>No multiple inheritance</li>
+<li>No virtual keyword (all non-static methods are virtual by default)</li>
+<li>Supports unsigned right shift <code>&gt;&gt;&gt;</code> (padding zero for negative numbers)</li>
+<li>Single inheritance tree; all classes are children of <code>Object</code></li>
+<li>All values get initialized.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgheadline7" class="outline-4">
+<h4 id="orgheadline7"><span class="section-number-4">1.1.7</span> Some keywords</h4>
+<div class="outline-text-4" id="text-1-1-7">
+<ul class="org-ul">
+<li><code>strictfp</code>: restricts floating-point calculations to ensure portability.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgheadline18" class="outline-3">
+<h3 id="orgheadline18"><span class="section-number-3">1.2</span> Object Oriented Java</h3>
+<div class="outline-text-3" id="text-1-2">
+</div><div id="outline-container-orgheadline9" class="outline-4">
+<h4 id="orgheadline9"><span class="section-number-4">1.2.1</span> Inheritance</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<ul class="org-ul">
+<li>Whenever you create the instance of subclass, an instance of parent class is created implicitly (<code>super</code>)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgheadline10" class="outline-4">
+<h4 id="orgheadline10"><span class="section-number-4">1.2.2</span> Static keyword</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<p>
+<code>static</code> is used for memory management mainly. 
+</p>
+<ul class="org-ul">
+<li><b>Static variable</b> can be used to refer the common property of all objects and get memory only once in class area.</li>
+<li><b>Static method</b> belongs to the class rather than an object. We cannot override static methods.</li>
+<li><b>Static block</b> is executed in class loader</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-java"><span style="color: #3a81c3; font-weight: bold;">public</span> <span style="color: #3a81c3; font-weight: bold;">class</span> <span style="color: #ba2f59; font-weight: bold;">Main</span> <span style="color: #3a81c3;">{</span>
+    <span style="color: #3a81c3; font-weight: bold;">public</span> <span style="color: #3a81c3; font-weight: bold;">static</span> <span style="color: #ba2f59; font-weight: bold;">void</span> <span style="color: #6c3163; font-weight: bold;">main</span><span style="color: #6c3163;">(</span><span style="color: #ba2f59; font-weight: bold;">String</span><span style="color: #2d9574;">[]</span> <span style="color: #715ab1;">args</span><span style="color: #6c3163;">)</span> <span style="color: #6c3163;">{</span>
+        System.out.println<span style="color: #2d9574;">(</span><span style="color: #2d9574;">"main"</span><span style="color: #2d9574;">)</span>;
+    <span style="color: #6c3163;">}</span>
+
+    <span style="color: #3a81c3; font-weight: bold;">static</span><span style="color: #6c3163;">{</span>System.out.println<span style="color: #2d9574;">(</span><span style="color: #2d9574;">"Called in class loading, before main()"</span><span style="color: #2d9574;">)</span>;<span style="color: #6c3163;">}</span>
+
+<span style="color: #3a81c3;">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline11" class="outline-4">
+<h4 id="orgheadline11"><span class="section-number-4">1.2.3</span> Instance Initializer block</h4>
+<div class="outline-text-4" id="text-1-2-3">
+<div class="org-src-container">
+
+<pre class="src src-java"><span style="color: #3a81c3; font-weight: bold;">class</span> <span style="color: #ba2f59; font-weight: bold;">SuperClass</span><span style="color: #3a81c3;">{</span>
+    <span style="color: #6c3163; font-weight: bold;">SuperClass</span><span style="color: #6c3163;">(){</span>
+        System.out.println<span style="color: #2d9574;">(</span><span style="color: #2d9574;">"super() called first"</span><span style="color: #2d9574;">)</span>;
+    <span style="color: #6c3163;">}</span>
+<span style="color: #3a81c3;">}</span>
+
+<span style="color: #3a81c3; font-weight: bold;">class</span> <span style="color: #ba2f59; font-weight: bold;">SubClass</span> <span style="color: #3a81c3; font-weight: bold;">extends</span> <span style="color: #ba2f59; font-weight: bold;">SuperClass</span><span style="color: #3a81c3;">{</span>
+    <span style="color: #6c3163; font-weight: bold;">SubClass</span><span style="color: #6c3163;">(){</span>
+        System.out.println<span style="color: #2d9574;">(</span><span style="color: #2d9574;">"Constructor of subclass called after initializer block"</span><span style="color: #2d9574;">)</span>;
+    <span style="color: #6c3163;">}</span>
+
+    <span style="color: #6c3163;">{</span>
+        System.out.println<span style="color: #2d9574;">(</span><span style="color: #2d9574;">"Initializer block called after super()"</span><span style="color: #2d9574;">)</span>;
+    <span style="color: #6c3163;">}</span>
+<span style="color: #3a81c3;">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline12" class="outline-4">
+<h4 id="orgheadline12"><span class="section-number-4">1.2.4</span> Final keyword</h4>
+<div class="outline-text-4" id="text-1-2-4">
+<p>
+The <code>final</code> keyword is used to restrict users. 
+</p>
+<ul class="org-ul">
+<li><b>final variable</b> is constant and can be initialized directly or in constructor only.</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-java"><span style="color: #3a81c3; font-weight: bold;">class</span> <span style="color: #ba2f59; font-weight: bold;">Student</span><span style="color: #3a81c3;">{</span>
+    <span style="color: #3a81c3; font-weight: bold;">public</span> <span style="color: #3a81c3; font-weight: bold;">final</span> <span style="color: #ba2f59; font-weight: bold;">String</span> <span style="color: #715ab1;">name</span>;    
+    <span style="color: #6c3163; font-weight: bold;">Student</span><span style="color: #6c3163;">(</span><span style="color: #ba2f59; font-weight: bold;">String</span> <span style="color: #715ab1;">name</span><span style="color: #6c3163;">){</span>
+        <span style="color: #3a81c3; font-weight: bold;">this</span>.name = name;
+    <span style="color: #6c3163;">}</span>
+
+    <span style="color: #3a81c3; font-weight: bold;">static</span> <span style="color: #3a81c3; font-weight: bold;">public</span> <span style="color: #3a81c3; font-weight: bold;">final</span> <span style="color: #ba2f59; font-weight: bold;">String</span> <span style="color: #715ab1;">school</span>;
+    <span style="color: #3a81c3; font-weight: bold;">static</span> <span style="color: #6c3163;">{</span>
+        school = <span style="color: #2d9574;">"No.1 middle school"</span>;
+    <span style="color: #6c3163;">}</span>
+<span style="color: #3a81c3;">}</span>
+</pre>
+</div>
+<ul class="org-ul">
+<li><b>final method</b> cannot be overridden</li>
+<li><b>final class</b> cannot be extended</li>
+<li><b>final parameter</b> of a function is constant</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline13" class="outline-4">
+<h4 id="orgheadline13"><span class="section-number-4">1.2.5</span> Runtime polymorphism, or Dynamic method dispatch</h4>
+<div class="outline-text-4" id="text-1-2-5">
+<ul class="org-ul">
+<li>A call to an overridden method is resolved at runtime rather than compile time.</li>
+<li>Note that rumtime polymorphism cannot be achieved by data members.</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-java"><span style="color: #3a81c3; font-weight: bold;">public</span> <span style="color: #3a81c3; font-weight: bold;">class</span> <span style="color: #ba2f59; font-weight: bold;">A</span> <span style="color: #3a81c3;">{</span>
+    <span style="color: #3a81c3; font-weight: bold;">public</span> <span style="color: #3a81c3; font-weight: bold;">static</span> <span style="color: #ba2f59; font-weight: bold;">void</span> <span style="color: #6c3163; font-weight: bold;">main</span><span style="color: #6c3163;">(</span><span style="color: #ba2f59; font-weight: bold;">String</span><span style="color: #2d9574;">[]</span> <span style="color: #715ab1;">args</span><span style="color: #6c3163;">){</span>
+        <span style="color: #2aa1ae; background-color: #ecf3ec;">// </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Call subclass method even after up casting</span>
+        <span style="color: #ba2f59; font-weight: bold;">Animal</span> <span style="color: #715ab1;">cat</span> = <span style="color: #3a81c3; font-weight: bold;">new</span> <span style="color: #ba2f59; font-weight: bold;">Cat</span><span style="color: #2d9574;">()</span>;
+        <span style="color: #ba2f59; font-weight: bold;">Animal</span> <span style="color: #715ab1;">dog</span> = <span style="color: #3a81c3; font-weight: bold;">new</span> <span style="color: #ba2f59; font-weight: bold;">Dog</span><span style="color: #2d9574;">()</span>;
+        cat.makeSound<span style="color: #2d9574;">()</span>;
+        dog.makeSound<span style="color: #2d9574;">()</span>;
+    <span style="color: #6c3163;">}</span>
+<span style="color: #3a81c3;">}</span>
+
+<span style="color: #3a81c3; font-weight: bold;">class</span> <span style="color: #ba2f59; font-weight: bold;">Animal</span> <span style="color: #3a81c3;">{</span>
+    <span style="color: #ba2f59; font-weight: bold;">void</span> <span style="color: #6c3163; font-weight: bold;">makeSound</span><span style="color: #6c3163;">(){</span>
+        System.out.println<span style="color: #2d9574;">(</span><span style="color: #2d9574;">"animal sound"</span><span style="color: #2d9574;">)</span>;
+    <span style="color: #6c3163;">}</span>
+<span style="color: #3a81c3;">}</span>
+
+<span style="color: #3a81c3; font-weight: bold;">class</span> <span style="color: #ba2f59; font-weight: bold;">Cat</span> <span style="color: #3a81c3; font-weight: bold;">extends</span> <span style="color: #ba2f59; font-weight: bold;">Animal</span> <span style="color: #3a81c3;">{</span>
+    <span style="color: #ba2f59; font-weight: bold;">void</span> <span style="color: #6c3163; font-weight: bold;">makeSound</span><span style="color: #6c3163;">(){</span>
+        System.out.println<span style="color: #2d9574;">(</span><span style="color: #2d9574;">"meow"</span><span style="color: #2d9574;">)</span>;
+    <span style="color: #6c3163;">}</span>
+<span style="color: #3a81c3;">}</span>
+
+<span style="color: #3a81c3; font-weight: bold;">class</span> <span style="color: #ba2f59; font-weight: bold;">Dog</span> <span style="color: #3a81c3; font-weight: bold;">extends</span> <span style="color: #ba2f59; font-weight: bold;">Animal</span> <span style="color: #3a81c3;">{</span>
+    <span style="color: #ba2f59; font-weight: bold;">void</span> <span style="color: #6c3163; font-weight: bold;">makeSound</span><span style="color: #6c3163;">(){</span>
+        System.out.println<span style="color: #2d9574;">(</span><span style="color: #2d9574;">"bark"</span><span style="color: #2d9574;">)</span>;
+    <span style="color: #6c3163;">}</span>
+<span style="color: #3a81c3;">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline14" class="outline-4">
+<h4 id="orgheadline14"><span class="section-number-4">1.2.6</span> Static binding and dynamic binding</h4>
+<div class="outline-text-4" id="text-1-2-6">
+<ul class="org-ul">
+<li>Binding: connecting a method call to the method body</li>
+<li>Static (early) binding: type of the object is determined at compile time by the compiler</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-java"><span style="color: #3a81c3; font-weight: bold;">public</span> <span style="color: #3a81c3; font-weight: bold;">class</span> <span style="color: #ba2f59; font-weight: bold;">A</span> <span style="color: #3a81c3;">{</span>
+    <span style="color: #3a81c3; font-weight: bold;">public</span> <span style="color: #3a81c3; font-weight: bold;">static</span> <span style="color: #ba2f59; font-weight: bold;">void</span> <span style="color: #6c3163; font-weight: bold;">main</span><span style="color: #6c3163;">(</span><span style="color: #ba2f59; font-weight: bold;">String</span><span style="color: #2d9574;">[]</span> <span style="color: #715ab1;">args</span><span style="color: #6c3163;">){</span>
+        <span style="color: #2aa1ae; background-color: #ecf3ec;">// </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Call subclass method even after up casting</span>
+        dynamicBinding<span style="color: #2d9574;">(</span><span style="color: #3a81c3; font-weight: bold;">new</span> <span style="color: #ba2f59; font-weight: bold;">Cat</span><span style="color: #67b11d;">()</span><span style="color: #2d9574;">)</span>;
+        dynamicBinding<span style="color: #2d9574;">(</span><span style="color: #3a81c3; font-weight: bold;">new</span> <span style="color: #ba2f59; font-weight: bold;">Dog</span><span style="color: #67b11d;">()</span><span style="color: #2d9574;">)</span>;
+    <span style="color: #6c3163;">}</span>
+
+    <span style="color: #3a81c3; font-weight: bold;">static</span> <span style="color: #ba2f59; font-weight: bold;">void</span> <span style="color: #6c3163; font-weight: bold;">dynamicBinding</span><span style="color: #6c3163;">(</span><span style="color: #ba2f59; font-weight: bold;">Animal</span> <span style="color: #715ab1;">a</span><span style="color: #6c3163;">){</span>
+        a.makeSound<span style="color: #2d9574;">()</span>;
+    <span style="color: #6c3163;">}</span>
+<span style="color: #3a81c3;">}</span>
+
+<span style="color: #3a81c3; font-weight: bold;">class</span> <span style="color: #ba2f59; font-weight: bold;">Animal</span> <span style="color: #3a81c3;">{</span>
+    <span style="color: #ba2f59; font-weight: bold;">void</span> <span style="color: #6c3163; font-weight: bold;">makeSound</span><span style="color: #6c3163;">(){</span>
+        System.out.println<span style="color: #2d9574;">(</span><span style="color: #2d9574;">"animal sound"</span><span style="color: #2d9574;">)</span>;
+    <span style="color: #6c3163;">}</span>
+<span style="color: #3a81c3;">}</span>
+
+<span style="color: #3a81c3; font-weight: bold;">class</span> <span style="color: #ba2f59; font-weight: bold;">Cat</span> <span style="color: #3a81c3; font-weight: bold;">extends</span> <span style="color: #ba2f59; font-weight: bold;">Animal</span> <span style="color: #3a81c3;">{</span>
+    <span style="color: #ba2f59; font-weight: bold;">void</span> <span style="color: #6c3163; font-weight: bold;">makeSound</span><span style="color: #6c3163;">(){</span>
+        System.out.println<span style="color: #2d9574;">(</span><span style="color: #2d9574;">"meow"</span><span style="color: #2d9574;">)</span>;
+    <span style="color: #6c3163;">}</span>
+<span style="color: #3a81c3;">}</span>
+
+<span style="color: #3a81c3; font-weight: bold;">class</span> <span style="color: #ba2f59; font-weight: bold;">Dog</span> <span style="color: #3a81c3; font-weight: bold;">extends</span> <span style="color: #ba2f59; font-weight: bold;">Animal</span> <span style="color: #3a81c3;">{</span>
+    <span style="color: #ba2f59; font-weight: bold;">void</span> <span style="color: #6c3163; font-weight: bold;">makeSound</span><span style="color: #6c3163;">(){</span>
+        System.out.println<span style="color: #2d9574;">(</span><span style="color: #2d9574;">"bark"</span><span style="color: #2d9574;">)</span>;
+    <span style="color: #6c3163;">}</span>
+<span style="color: #3a81c3;">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline15" class="outline-4">
+<h4 id="orgheadline15"><span class="section-number-4">1.2.7</span> <b><code>instanceof</code></b>, type comparison</h4>
+<div class="outline-text-4" id="text-1-2-7">
+<ul class="org-ul">
+<li><code>instanceof</code> compares an instance with a type, and return true if the instance if of the type or can be cast to the type.</li>
+<li>Before down casting, check the possibility using <code>instanceof</code></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline16" class="outline-4">
+<h4 id="orgheadline16"><span class="section-number-4">1.2.8</span> Abstraction</h4>
+<div class="outline-text-4" id="text-1-2-8">
+<ul class="org-ul">
+<li>Abstraction means hiding the implementation details and showing only functionality to users</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgheadline17" class="outline-4">
+<h4 id="orgheadline17"><span class="section-number-4">1.2.9</span> Interface</h4>
+<div class="outline-text-4" id="text-1-2-9">
+<ul class="org-ul">
+<li>An interface is a blueprint of a class</li>
+<li>Interface fields are <code>public static final</code> by default.</li>
+<li>Interface methods are <code>public abstract</code> by default.</li>
+<li>A Java class can implement multiple interfaces</li>
+<li>An interface with no number is known as <b>marker</b> or <b>tagger</b> interface, such as Serializable, Cloneable etc</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgheadline22" class="outline-3">
+<h3 id="orgheadline22"><span class="section-number-3">1.3</span> Data Structures</h3>
+<div class="outline-text-3" id="text-1-3">
+</div><div id="outline-container-orgheadline19" class="outline-4">
+<h4 id="orgheadline19"><span class="section-number-4">1.3.1</span> Array</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<p>
+Array is fixed size in Java
+</p>
+<div class="org-src-container">
+
+<pre class="src src-java"><span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">a</span><span style="color: #3a81c3;">[]</span> = <span style="color: #3a81c3; font-weight: bold;">new</span> <span style="color: #ba2f59; font-weight: bold;">int</span><span style="color: #3a81c3;">[</span><span style="color: #4e3163;">5</span><span style="color: #3a81c3;">]</span>;
+<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">b</span><span style="color: #3a81c3;">[]</span> = <span style="color: #3a81c3;">{</span><span style="color: #4e3163;">1</span>,<span style="color: #4e3163;">2</span>,<span style="color: #4e3163;">3</span><span style="color: #3a81c3;">}</span>;
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgheadline20" class="outline-4">
+<h4 id="orgheadline20"><span class="section-number-4">1.3.2</span> Wrapper classes</h4>
+<div class="outline-text-4" id="text-1-3-2">
+<ul class="org-ul">
+<li>Wrapper class in Java provides the mechanism to convert primitive (<code>int</code>) into object (<code>Integer</code>) and object into primitive.</li>
+<li>Autoboxing and unboxing: the automatic conversion of primitive into objects and vise versa</li>
+<li>All the wrapper classes are immutable (immutable does not mean constant).</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline21" class="outline-4">
+<h4 id="orgheadline21"><span class="section-number-4">1.3.3</span> String</h4>
+<div class="outline-text-4" id="text-1-3-3">
+<ul class="org-ul">
+<li>Java <code>String</code> is like <code>char[]</code>, a sequence of char.</li>
+<li><code>java.lang.String implements Serializable, Comparable and CharSequence</code></li>
+<li>Java <code>String</code> is immutable. <code>StringBuffer</code> is the same as <code>String</code> except for that it is mutable.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline27" class="outline-3">
+<h3 id="orgheadline27"><span class="section-number-3">1.4</span> Exception</h3>
+<div class="outline-text-3" id="text-1-4">
+</div><div id="outline-container-orgheadline23" class="outline-4">
+<h4 id="orgheadline23"><span class="section-number-4">1.4.1</span> Hierarchy of Java Exception classes</h4>
+<div class="outline-text-4" id="text-1-4-1">
+
+<div class="figure">
+<p><img src="./figures/Java/exceptionhierarchy.jpg" alt="exceptionhierarchy.jpg" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgheadline24" class="outline-4">
+<h4 id="orgheadline24"><span class="section-number-4">1.4.2</span> Types of exceptions</h4>
+<div class="outline-text-4" id="text-1-4-2">
+<ul class="org-ul">
+<li>Checked exception: the classes that extend <code>Throwable</code> except <code>RuntimeException</code> and <code>Error</code>, such at <code>IOException</code>, <code>SQLException</code></li>
+<li>Unchecked exception: the classes that extend <code>RuntimeException</code>, such as <code>NullPointerException</code>, <code>ArrayIndexOutOfBoundsException</code>, <code>ArithmeticException</code>. Unchecked exceptions usually mean the programmer made some mistakes.</li>
+<li>Error: error is irrecoverable, such as <code>OutOfMemoryError</code>, <code>AssertionError</code>, <code>VirtualMachineError</code></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgheadline25" class="outline-4">
+<h4 id="orgheadline25"><span class="section-number-4">1.4.3</span> Multiple catch</h4>
+<div class="outline-text-4" id="text-1-4-3">
+<ul class="org-ul">
+<li>At a time only one Exception is occurred and one catch block is executed</li>
+<li>All catch blocks must be ordered from most specific to most general</li>
+<li><code>fianlly</code> block is always executed and used for important code such as closing connection</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgheadline26" class="outline-4">
+<h4 id="orgheadline26"><span class="section-number-4">1.4.4</span> Declaring Exception in overriding a method</h4>
+<div class="outline-text-4" id="text-1-4-4">
+<ul class="org-ul">
+<li>If the parent method declares no exception, then the overriding method can only declare unchecked exception.</li>
+<li>If the parent method declares an exception, then the overriding method cannot declare a super-class exception.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline34" class="outline-3">
+<h3 id="orgheadline34"><span class="section-number-3">1.5</span> Nested Classes</h3>
+<div class="outline-text-3" id="text-1-5">
+</div><div id="outline-container-orgheadline31" class="outline-4">
+<h4 id="orgheadline31"><span class="section-number-4">1.5.1</span> Inner class: non-static nested class</h4>
+<div class="outline-text-4" id="text-1-5-1">
+</div><ol class="org-ol"><li><a id="orgheadline28"></a>Member inner class: a class created within a class and outside method<br  /><div class="outline-text-5" id="text-1-5-1-1">
+<p>
+In order to instantiate a inner class, you have to instantiate an outer class.
+</p>
+</div></li>
+
+<li><a id="orgheadline29"></a>Anonymous inner class<br  /><div class="outline-text-5" id="text-1-5-1-2">
+<p>
+Anonymous inner class should be used if you have to override method temporarily.
+</p>
+<div class="org-src-container">
+
+<pre class="src src-java"><span style="color: #3a81c3; font-weight: bold;">class</span> <span style="color: #ba2f59; font-weight: bold;">B</span><span style="color: #3a81c3;">{</span>
+    <span style="color: #ba2f59; font-weight: bold;">void</span> <span style="color: #6c3163; font-weight: bold;">method</span><span style="color: #6c3163;">(){</span>
+        System.out.println<span style="color: #2d9574;">(</span><span style="color: #2d9574;">"Old method"</span><span style="color: #2d9574;">)</span>;
+    <span style="color: #6c3163;">}</span>
+<span style="color: #3a81c3;">}</span>
+
+<span style="color: #3a81c3; font-weight: bold;">public</span> <span style="color: #3a81c3; font-weight: bold;">class</span> <span style="color: #ba2f59; font-weight: bold;">A</span> <span style="color: #3a81c3;">{</span>
+    <span style="color: #3a81c3; font-weight: bold;">public</span> <span style="color: #3a81c3; font-weight: bold;">static</span> <span style="color: #ba2f59; font-weight: bold;">void</span> <span style="color: #6c3163; font-weight: bold;">main</span><span style="color: #6c3163;">(</span><span style="color: #ba2f59; font-weight: bold;">String</span><span style="color: #2d9574;">[]</span> <span style="color: #715ab1;">args</span><span style="color: #6c3163;">){</span>
+
+        <span style="color: #ba2f59; font-weight: bold;">B</span> <span style="color: #715ab1;">b</span> = <span style="color: #3a81c3; font-weight: bold;">new</span> <span style="color: #ba2f59; font-weight: bold;">B</span><span style="color: #2d9574;">(){</span>
+            <span style="color: #ba2f59; font-weight: bold;">void</span> <span style="color: #6c3163; font-weight: bold;">method</span><span style="color: #67b11d;">(){</span>
+                System.out.println<span style="color: #b1951d;">(</span><span style="color: #2d9574;">"New method"</span><span style="color: #b1951d;">)</span>;
+            <span style="color: #67b11d;">}</span>
+        <span style="color: #2d9574;">}</span>;
+        b.method<span style="color: #2d9574;">()</span>;
+    <span style="color: #6c3163;">}</span>
+<span style="color: #3a81c3;">}</span>
+</pre>
+</div>
+</div></li>
+
+<li><a id="orgheadline30"></a>Local inner class: a class created within a method<br  /></li></ol>
+</div>
+
+
+<div id="outline-container-orgheadline32" class="outline-4">
+<h4 id="orgheadline32"><span class="section-number-4">1.5.2</span> Static nested class</h4>
+<div class="outline-text-4" id="text-1-5-2">
+<div class="org-src-container">
+
+<pre class="src src-java"><span style="color: #3a81c3; font-weight: bold;">public</span> <span style="color: #3a81c3; font-weight: bold;">class</span> <span style="color: #ba2f59; font-weight: bold;">A</span> <span style="color: #3a81c3;">{</span>
+    <span style="color: #3a81c3; font-weight: bold;">static</span> <span style="color: #3a81c3; font-weight: bold;">class</span> <span style="color: #ba2f59; font-weight: bold;">B</span><span style="color: #6c3163;">{</span>
+        <span style="color: #ba2f59; font-weight: bold;">void</span> <span style="color: #6c3163; font-weight: bold;">method</span><span style="color: #2d9574;">(){</span>
+            System.out.println<span style="color: #67b11d;">(</span><span style="color: #2d9574;">"Static inner class"</span><span style="color: #67b11d;">)</span>;
+        <span style="color: #2d9574;">}</span>
+    <span style="color: #6c3163;">}</span>    
+    <span style="color: #3a81c3; font-weight: bold;">public</span> <span style="color: #3a81c3; font-weight: bold;">static</span> <span style="color: #ba2f59; font-weight: bold;">void</span> <span style="color: #6c3163; font-weight: bold;">main</span><span style="color: #6c3163;">(</span><span style="color: #ba2f59; font-weight: bold;">String</span><span style="color: #2d9574;">[]</span> <span style="color: #715ab1;">args</span><span style="color: #6c3163;">){</span>
+        <span style="color: #ba2f59; font-weight: bold;">B</span> <span style="color: #715ab1;">b</span> = <span style="color: #3a81c3; font-weight: bold;">new</span> <span style="color: #ba2f59; font-weight: bold;">B</span><span style="color: #2d9574;">()</span>;
+        b.method<span style="color: #2d9574;">()</span>;
+    <span style="color: #6c3163;">}</span>
+<span style="color: #3a81c3;">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline33" class="outline-4">
+<h4 id="orgheadline33"><span class="section-number-4">1.5.3</span> Nested interface</h4>
+<div class="outline-text-4" id="text-1-5-3">
+<p>
+An interface created within class or interface. It is useful to group related interfaces so that they can be easily maintained.
+</p>
+<div class="org-src-container">
+
+<pre class="src src-java"><span style="color: #3a81c3; font-weight: bold;">interface</span> <span style="color: #ba2f59; font-weight: bold;">Animal</span><span style="color: #3a81c3;">{</span>
+    <span style="color: #3a81c3; font-weight: bold;">interface</span> <span style="color: #ba2f59; font-weight: bold;">Dog</span><span style="color: #6c3163;">{}</span>
+<span style="color: #3a81c3;">}</span>
+<span style="color: #3a81c3; font-weight: bold;">class</span> <span style="color: #ba2f59; font-weight: bold;">Puppy</span> <span style="color: #3a81c3; font-weight: bold;">implements</span> <span style="color: #4e3163;">Animal</span>.<span style="color: #ba2f59; font-weight: bold;">Dog</span><span style="color: #3a81c3;">{}</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline35" class="outline-3">
+<h3 id="orgheadline35"><span class="section-number-3">1.6</span> Multithreading in Java</h3>
+<div class="outline-text-3" id="text-1-6">
+<ul class="org-ul">
+<li>Thread: a lightweight sub-process, a smallest unit of processing.</li>
+<li>Threads share a common area of memory.</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-orgheadline36" class="outline-3">
+<h3 id="orgheadline36"><span class="section-number-3">1.7</span> Garbage Collection</h3>
+</div>
+</div>
+
+
+<div id="outline-container-orgheadline53" class="outline-2">
+<h2 id="orgheadline53"><span class="section-number-2">2</span> C++</h2>
+<div class="outline-text-2" id="text-2">
+</div><div id="outline-container-orgheadline45" class="outline-3">
+<h3 id="orgheadline45"><span class="section-number-3">2.1</span> Pitfalls in C++</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Here I record some mistakes that are very easy to make in C++.
+</p>
+</div>
+<div id="outline-container-orgheadline38" class="outline-4">
+<h4 id="orgheadline38"><span class="section-number-4">2.1.1</span> Overflow and Underflow</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li>Avoid adding two <code>int</code> number when an easy alternative exists</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-c++"><span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">mid</span> = <span style="color: #3a81c3;">(</span>left + right<span style="color: #3a81c3;">)</span> / <span style="color: #4e3163;">2</span>;
+</pre>
+</div>
+<ul class="org-ul">
+<li>Avoid decrementing index of <code>size_t</code> type.</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-c++"><span style="color: #3a81c3; font-weight: bold;">for</span><span style="color: #3a81c3;">(</span><span style="color: #ba2f59; font-weight: bold;">size_t</span> <span style="color: #715ab1;">i</span> = <span style="color: #4e3163;">0</span>, <span style="color: #715ab1;">j</span> = num.size<span style="color: #6c3163;">()</span> - <span style="color: #4e3163;">1</span>; i &lt;= j; ++i, --j<span style="color: #3a81c3;">){</span>
+  <span style="color: #2aa1ae; background-color: #ecf3ec;">// </span><span style="color: #2aa1ae; background-color: #ecf3ec;">If num.size() == 1, then the next step j would underflow</span>
+<span style="color: #3a81c3;">}</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgheadline41" class="outline-4">
+<h4 id="orgheadline41"><span class="section-number-4">2.1.2</span> Implicit cast</h4>
+<div class="outline-text-4" id="text-2-1-2">
+</div><ol class="org-ol"><li><a id="orgheadline39"></a><code>int</code> to <code>unsigned</code><br  /><div class="outline-text-5" id="text-2-1-2-1">
+<p>
+A signed number is implicitly cast into unsigned before adding, and it may cause counter-intuitive results: 
+</p>
+<div class="org-src-container">
+
+<pre class="src src-c++">assert<span style="color: #3a81c3;">(</span><span style="color: #4e3163;">0U</span> - <span style="color: #4e3163;">1</span> == -<span style="color: #4e3163;">1</span><span style="color: #3a81c3;">)</span>;
+assert<span style="color: #3a81c3;">(</span><span style="color: #4e3163;">0U</span> - <span style="color: #4e3163;">1</span> &gt; <span style="color: #4e3163;">0</span><span style="color: #3a81c3;">)</span>;
+</pre>
+</div>
+
+<p>
+A common bug could occur when you want to loop through from the first to the second last element of a vector. Since <code>size()</code> is unsigned, and if the vector is empty, the loop will not be skipped.
+</p>
+<div class="org-src-container">
+
+<pre class="src src-c++"><span style="color: #ba2f59; font-weight: bold;">vector</span><span style="color: #3a81c3;">&lt;</span><span style="color: #ba2f59; font-weight: bold;">int</span><span style="color: #3a81c3;">&gt;</span> <span style="color: #715ab1;">xx</span>; <span style="color: #2aa1ae; background-color: #ecf3ec;">// </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Empty</span>
+<span style="color: #3a81c3; font-weight: bold;">for</span><span style="color: #3a81c3;">(</span><span style="color: #ba2f59; font-weight: bold;">size_t</span> <span style="color: #715ab1;">i</span> = <span style="color: #4e3163;">0</span>; i &lt; xx.size<span style="color: #6c3163;">()</span> - <span style="color: #4e3163;">1</span>; ++i<span style="color: #3a81c3;">){</span>
+  <span style="color: #2aa1ae; background-color: #ecf3ec;">// </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Loop will not stop until i = 4294967295</span>
+<span style="color: #3a81c3;">}</span>
+
+<span style="color: #3a81c3; font-weight: bold;">for</span><span style="color: #3a81c3;">(</span><span style="color: #ba2f59; font-weight: bold;">size_t</span> <span style="color: #715ab1;">i</span> = <span style="color: #4e3163;">0</span>; i + <span style="color: #4e3163;">1</span> &lt; xx.size<span style="color: #6c3163;">()</span>; ++i<span style="color: #3a81c3;">){</span>
+  <span style="color: #2aa1ae; background-color: #ecf3ec;">// </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Loop will be skipped (avoid adding int with unsigned)</span>
+<span style="color: #3a81c3;">}</span>
+</pre>
+</div>
+</div></li>
+
+<li><a id="orgheadline40"></a><code>int</code> to <code>bool</code><br  /><div class="outline-text-5" id="text-2-1-2-2">
+<p>
+<code>int</code> will be implicitly cast into <code>bool</code>. If you mistakenly type <code>&amp;</code> as <code>&amp;&amp;</code>, then it still compiles but lead to different result.
+</p>
+<div class="org-src-container">
+
+<pre class="src src-c++"><span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #715ab1;">x</span> = <span style="color: #4e3163;">0x0f</span>, <span style="color: #715ab1;">y</span> = <span style="color: #4e3163;">0xf0</span>;
+assert<span style="color: #3a81c3;">(</span><span style="color: #6c3163;">(</span>x &amp; y<span style="color: #6c3163;">)</span> == <span style="color: #4e3163;">0</span><span style="color: #3a81c3;">)</span>;
+assert<span style="color: #3a81c3;">(</span><span style="color: #6c3163;">(</span>x &amp;&amp; y<span style="color: #6c3163;">)</span> == <span style="color: #4e3163;">1</span><span style="color: #3a81c3;">)</span>;
+</pre>
+</div>
+</div></li></ol>
+</div>
+
+<div id="outline-container-orgheadline42" class="outline-4">
+<h4 id="orgheadline42"><span class="section-number-4">2.1.3</span> Vector</h4>
+<div class="outline-text-4" id="text-2-1-3">
+<ul class="org-ul">
+<li>When initializing a nested vector, <code>{}</code> is NOT the same as <code>{{}}</code>. <code>{}</code> is an empty vector, while <code>{{}}</code> is a size-1 vector containing an empty list.</li>
+<li>It is always easy to forget that vector does NOT check index bound. If you are not confident with the index, use <code>at()</code>.</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-c++"><span style="color: #ba2f59; font-weight: bold;">vector</span><span style="color: #3a81c3;">&lt;</span><span style="color: #ba2f59; font-weight: bold;">int</span><span style="color: #3a81c3;">&gt;</span> <span style="color: #715ab1;">xx</span> = <span style="color: #3a81c3;">{</span><span style="color: #4e3163;">0</span>,<span style="color: #4e3163;">1</span><span style="color: #3a81c3;">}</span>;
+<span style="color: #3a81c3; font-weight: bold;">try</span><span style="color: #3a81c3;">{</span>
+  cout &lt;&lt; xx.at<span style="color: #6c3163;">(</span><span style="color: #4e3163;">99</span><span style="color: #6c3163;">)</span>;
+<span style="color: #3a81c3;">}</span><span style="color: #3a81c3; font-weight: bold;">catch</span><span style="color: #3a81c3;">(</span><span style="color: #ba2f59; font-weight: bold;">out_of_range</span> <span style="color: #715ab1;">e</span><span style="color: #3a81c3;">){</span>
+  <span style="color: #2aa1ae; background-color: #ecf3ec;">// </span><span style="color: #2aa1ae; background-color: #ecf3ec;">If out of range, at() will raise exception.</span>
+<span style="color: #3a81c3;">}</span>
+</pre>
+</div>
+<ul class="org-ul">
+<li>C++ does not check iterator bound either. Dereferencing an out-of-range iterator will occur segmentation fault.</li>
+<li>The input range for a STL algorithm is a close-open range (NOT including the later iterator).</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-c++">xx = <span style="color: #3a81c3;">{</span><span style="color: #4e3163;">0</span>,<span style="color: #4e3163;">1</span>,<span style="color: #4e3163;">2</span>,<span style="color: #4e3163;">3</span>,<span style="color: #4e3163;">4</span><span style="color: #3a81c3;">}</span>;
+<span style="color: #ba2f59; font-weight: bold;">vector</span><span style="color: #3a81c3;">&lt;</span><span style="color: #ba2f59; font-weight: bold;">int</span><span style="color: #3a81c3;">&gt;</span> <span style="color: #6c3163; font-weight: bold;">sub</span> <span style="color: #3a81c3;">(</span>xx.begin<span style="color: #6c3163;">()</span> + <span style="color: #4e3163;">1</span>, xx.begin<span style="color: #6c3163;">()</span> + <span style="color: #4e3163;">3</span><span style="color: #3a81c3;">)</span>;
+assert<span style="color: #3a81c3;">(</span>sub == <span style="color: #ba2f59; font-weight: bold;">vector</span><span style="color: #6c3163;">&lt;</span><span style="color: #ba2f59; font-weight: bold;">int</span><span style="color: #6c3163;">&gt;</span> <span style="color: #6c3163;">(</span><span style="color: #2d9574;">{</span><span style="color: #4e3163;">1</span>,<span style="color: #4e3163;">2</span><span style="color: #2d9574;">}</span><span style="color: #6c3163;">)</span><span style="color: #3a81c3;">)</span>;
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline43" class="outline-4">
+<h4 id="orgheadline43"><span class="section-number-4">2.1.4</span> Char</h4>
+<div class="outline-text-4" id="text-2-1-4">
+<ul class="org-ul">
+<li>In C++ char type is more like integer.</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-c++">assert<span style="color: #3a81c3;">(</span> to_string<span style="color: #6c3163;">(</span><span style="color: #2d9574;">'a'</span><span style="color: #6c3163;">)</span> != <span style="color: #2d9574;">"a"</span> <span style="color: #3a81c3;">)</span>;
+assert<span style="color: #3a81c3;">(</span> to_string<span style="color: #6c3163;">(</span><span style="color: #2d9574;">'a'</span><span style="color: #6c3163;">)</span> == <span style="color: #2d9574;">"97"</span> <span style="color: #3a81c3;">)</span>;
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Char can be used to index an array syntactically, hiding some serious bugs</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-c++"><span style="color: #ba2f59; font-weight: bold;">vector</span><span style="color: #3a81c3;">&lt;</span><span style="color: #ba2f59; font-weight: bold;">int</span><span style="color: #3a81c3;">&gt;</span> <span style="color: #715ab1;">xx</span> = <span style="color: #3a81c3;">{</span><span style="color: #4e3163;">0</span>, <span style="color: #4e3163;">1</span>, <span style="color: #4e3163;">2</span>, <span style="color: #4e3163;">3</span><span style="color: #3a81c3;">}</span>;
+assert<span style="color: #3a81c3;">(</span> &amp; xx<span style="color: #6c3163;">[</span><span style="color: #2d9574;">'1'</span><span style="color: #6c3163;">]</span> != &amp; xx<span style="color: #6c3163;">[</span><span style="color: #4e3163;">1</span><span style="color: #6c3163;">]</span> <span style="color: #3a81c3;">)</span>;
+assert<span style="color: #3a81c3;">(</span>string<span style="color: #6c3163;">(</span><span style="color: #2d9574;">'1'</span>, <span style="color: #4e3163;">65</span><span style="color: #6c3163;">)</span> == <span style="color: #2d9574;">"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"</span><span style="color: #3a81c3;">)</span>;
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline44" class="outline-4">
+<h4 id="orgheadline44"><span class="section-number-4">2.1.5</span> Boolean</h4>
+<div class="outline-text-4" id="text-2-1-5">
+<ul class="org-ul">
+<li>Size of <code>bool</code> is implementation-defined, not specified by the standard. It could be 1 byte instead of 1 bit.</li>
+<li>Use <code>!var</code> to flip a <code>bool</code> variable.</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-c++"><span style="color: #ba2f59; font-weight: bold;">bool</span> <span style="color: #715ab1;">a</span> = <span style="color: #4e3163;">false</span>;
+assert<span style="color: #3a81c3;">(</span> ~a != <span style="color: #4e3163;">true</span> <span style="color: #3a81c3;">)</span>;
+assert<span style="color: #3a81c3;">(</span> <span style="color: #4e3163;">!</span>a == <span style="color: #4e3163;">true</span> <span style="color: #3a81c3;">)</span>;
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline48" class="outline-3">
+<h3 id="orgheadline48"><span class="section-number-3">2.2</span> Techniques</h3>
+<div class="outline-text-3" id="text-2-2">
+</div><div id="outline-container-orgheadline46" class="outline-4">
+<h4 id="orgheadline46"><span class="section-number-4">2.2.1</span> Logical operators</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<ul class="org-ul">
+<li>There is no logical XOR operator. Use <code>a != b</code> instead. Do NOT use bitwise XOR <code>^</code>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgheadline47" class="outline-4">
+<h4 id="orgheadline47"><span class="section-number-4">2.2.2</span> Assertion</h4>
+<div class="outline-text-4" id="text-2-2-2">
+<ul class="org-ul">
+<li>Use assertion to reveal bugs in the code.</li>
+<li>In production, to improve efficiency define <code>NDEBUG</code> to ignore all assertions.</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-c++"><span style="color: #2aa1ae; background-color: #ecf3ec;">// </span><span style="color: #2aa1ae; background-color: #ecf3ec;">#define NDEBUG</span>
+<span style="color: #6c3163;">#include</span><span style="color: #2d9574;">&lt;assert.h&gt;</span>
+<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">main</span><span style="color: #3a81c3;">(){</span>
+  assert<span style="color: #6c3163;">(</span><span style="color: #4e3163;">true</span><span style="color: #6c3163;">)</span>;
+<span style="color: #3a81c3;">}</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline49" class="outline-3">
+<h3 id="orgheadline49"><span class="section-number-3">2.3</span> Causes of Segmentation Fault</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>Out-of-range iterator</li>
+<li>Uninitialized pointer</li>
+<li><code>pop()</code> on an empty stack or queue.</li>
+<li>Infinite function call stack</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline52" class="outline-3">
+<h3 id="orgheadline52"><span class="section-number-3">2.4</span> Templates</h3>
+<div class="outline-text-3" id="text-2-4">
+</div><div id="outline-container-orgheadline50" class="outline-4">
+<h4 id="orgheadline50"><span class="section-number-4">2.4.1</span> File IO</h4>
+<div class="outline-text-4" id="text-2-4-1">
+<div class="org-src-container">
+
+<pre class="src src-c++"><span style="color: #6c3163;">#include</span><span style="color: #2d9574;">&lt;iostream&gt;</span>
+<span style="color: #6c3163;">#include</span><span style="color: #2d9574;">&lt;fstream&gt;</span>
+<span style="color: #6c3163;">#include</span><span style="color: #2d9574;">&lt;sstream&gt;</span>
+<span style="color: #6c3163;">#include</span><span style="color: #2d9574;">&lt;vector&gt;</span>
+<span style="color: #3a81c3; font-weight: bold;">using</span> <span style="color: #3a81c3; font-weight: bold;">namespace</span> <span style="color: #4e3163;">std</span>;
+
+<span style="color: #3a81c3; font-weight: bold;">template</span><span style="color: #3a81c3;">&lt;</span><span style="color: #3a81c3; font-weight: bold;">typename</span> <span style="color: #ba2f59; font-weight: bold;">T</span><span style="color: #3a81c3;">&gt;</span>
+<span style="color: #ba2f59; font-weight: bold;">ostream</span> &amp; <span style="color: #3a81c3; font-weight: bold;">operator</span><span style="color: #6c3163; font-weight: bold;">&lt;&lt;</span><span style="color: #3a81c3;">(</span><span style="color: #ba2f59; font-weight: bold;">ostream</span> &amp; <span style="color: #715ab1;">os</span>, <span style="color: #ba2f59; font-weight: bold;">vector</span><span style="color: #6c3163;">&lt;</span><span style="color: #ba2f59; font-weight: bold;">T</span><span style="color: #6c3163;">&gt;</span> <span style="color: #715ab1;">xx</span><span style="color: #3a81c3;">){</span>
+  <span style="color: #3a81c3; font-weight: bold;">for</span><span style="color: #6c3163;">(</span><span style="color: #ba2f59; font-weight: bold;">T</span> <span style="color: #715ab1;">x</span> : xx<span style="color: #6c3163;">)</span> os &lt;&lt; x &lt;&lt; <span style="color: #2d9574;">" "</span>;
+  <span style="color: #3a81c3; font-weight: bold;">return</span> os;
+<span style="color: #3a81c3;">}</span>
+
+<span style="color: #ba2f59; font-weight: bold;">vector</span><span style="color: #3a81c3;">&lt;</span><span style="color: #ba2f59; font-weight: bold;">string</span><span style="color: #3a81c3;">&gt;</span> <span style="color: #6c3163; font-weight: bold;">split</span><span style="color: #3a81c3;">(</span><span style="color: #ba2f59; font-weight: bold;">string</span> <span style="color: #715ab1;">input</span>, <span style="color: #ba2f59; font-weight: bold;">char</span> <span style="color: #715ab1;">delimiter</span><span style="color: #3a81c3;">){</span>
+  <span style="color: #ba2f59; font-weight: bold;">stringstream</span> <span style="color: #715ab1;">ss</span> <span style="color: #6c3163;">(</span>input<span style="color: #6c3163;">)</span>;
+  <span style="color: #ba2f59; font-weight: bold;">string</span> <span style="color: #715ab1;">word</span>;
+  <span style="color: #ba2f59; font-weight: bold;">vector</span><span style="color: #6c3163;">&lt;</span><span style="color: #ba2f59; font-weight: bold;">string</span><span style="color: #6c3163;">&gt;</span> <span style="color: #715ab1;">result</span>;
+  <span style="color: #3a81c3; font-weight: bold;">while</span><span style="color: #6c3163;">(</span>getline<span style="color: #2d9574;">(</span>ss, word, delimiter<span style="color: #2d9574;">)</span><span style="color: #6c3163;">){</span>
+    result.push_back<span style="color: #2d9574;">(</span>word<span style="color: #2d9574;">)</span>;
+  <span style="color: #6c3163;">}</span>
+  <span style="color: #3a81c3; font-weight: bold;">return</span> result;
+<span style="color: #3a81c3;">}</span>
+
+<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">main</span><span style="color: #3a81c3;">(){</span>
+  <span style="color: #2aa1ae; background-color: #ecf3ec;">// </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Read file by line</span>
+  <span style="color: #ba2f59; font-weight: bold;">ifstream</span> <span style="color: #715ab1;">infile</span> <span style="color: #6c3163;">(</span><span style="color: #2d9574;">"test.txt"</span><span style="color: #6c3163;">)</span>;
+  <span style="color: #3a81c3; font-weight: bold;">if</span><span style="color: #6c3163;">(</span>infile.is_open<span style="color: #2d9574;">()</span><span style="color: #6c3163;">){</span>
+    <span style="color: #ba2f59; font-weight: bold;">string</span> <span style="color: #715ab1;">line</span>;
+    <span style="color: #3a81c3; font-weight: bold;">while</span><span style="color: #2d9574;">(</span>getline<span style="color: #67b11d;">(</span>infile, line, <span style="color: #2d9574;">'\n'</span><span style="color: #67b11d;">)</span><span style="color: #2d9574;">){</span>
+      cout &lt;&lt; split<span style="color: #67b11d;">(</span>line, <span style="color: #2d9574;">','</span><span style="color: #67b11d;">)</span> &lt;&lt; endl;
+    <span style="color: #2d9574;">}</span>
+    infile.close<span style="color: #2d9574;">()</span>;
+  <span style="color: #6c3163;">}</span>
+
+  <span style="color: #2aa1ae; background-color: #ecf3ec;">// </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Write file</span>
+  <span style="color: #ba2f59; font-weight: bold;">ofstream</span> <span style="color: #715ab1;">outfile</span> <span style="color: #6c3163;">(</span><span style="color: #2d9574;">"out.txt"</span><span style="color: #6c3163;">)</span>;
+  <span style="color: #3a81c3; font-weight: bold;">if</span><span style="color: #6c3163;">(</span>outfile.is_open<span style="color: #2d9574;">()</span><span style="color: #6c3163;">){</span>
+    outfile &lt;&lt; <span style="color: #2d9574;">"Write to file as a stream\n"</span>;
+  <span style="color: #6c3163;">}</span>
+<span style="color: #3a81c3;">}</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgheadline51" class="outline-4">
+<h4 id="orgheadline51"><span class="section-number-4">2.4.2</span> Timer</h4>
+<div class="outline-text-4" id="text-2-4-2">
+<div class="org-src-container">
+
+<pre class="src src-c++"><span style="color: #6c3163;">#include</span><span style="color: #2d9574;">&lt;iostream&gt;</span>
+<span style="color: #6c3163;">#include</span><span style="color: #2d9574;">&lt;chrono&gt;</span>
+<span style="color: #6c3163;">#include</span><span style="color: #2d9574;">&lt;vector&gt;</span>
+
+<span style="color: #3a81c3; font-weight: bold;">typedef</span> <span style="color: #4e3163;">std</span>::<span style="color: #4e3163;">chrono</span>::<span style="color: #ba2f59; font-weight: bold;">high_resolution_clock</span> <span style="color: #ba2f59; font-weight: bold;">HRTime</span>;
+<span style="color: #3a81c3; font-weight: bold;">typedef</span> <span style="color: #4e3163;">std</span>::<span style="color: #4e3163;">chrono</span>::<span style="color: #ba2f59; font-weight: bold;">time_point</span><span style="color: #3a81c3;">&lt;</span><span style="color: #ba2f59; font-weight: bold;">HRTime</span><span style="color: #3a81c3;">&gt;</span> <span style="color: #ba2f59; font-weight: bold;">TimePoint</span>;
+<span style="color: #3a81c3; font-weight: bold;">typedef</span> <span style="color: #4e3163;">std</span>::<span style="color: #4e3163;">chrono</span>::<span style="color: #ba2f59; font-weight: bold;">duration</span><span style="color: #3a81c3;">&lt;</span><span style="color: #ba2f59; font-weight: bold;">float</span><span style="color: #3a81c3;">&gt;</span> <span style="color: #ba2f59; font-weight: bold;">FloatSecond</span>;
+
+<span style="color: #ba2f59; font-weight: bold;">void</span> <span style="color: #6c3163; font-weight: bold;">task</span><span style="color: #3a81c3;">(){</span>
+  <span style="color: #4e3163;">std</span>::<span style="color: #ba2f59; font-weight: bold;">vector</span><span style="color: #6c3163;">&lt;</span><span style="color: #ba2f59; font-weight: bold;">int</span><span style="color: #6c3163;">&gt;</span> <span style="color: #715ab1;">xx</span> <span style="color: #6c3163;">(</span><span style="color: #4e3163;">1</span> &lt;&lt; <span style="color: #4e3163;">25</span>, <span style="color: #4e3163;">0</span><span style="color: #6c3163;">)</span>;
+  <span style="color: #3a81c3; font-weight: bold;">for</span><span style="color: #6c3163;">(</span><span style="color: #ba2f59; font-weight: bold;">int</span> &amp; <span style="color: #715ab1;">x</span> : xx<span style="color: #6c3163;">)</span> x = rand<span style="color: #6c3163;">()</span>;
+<span style="color: #3a81c3;">}</span>
+
+<span style="color: #ba2f59; font-weight: bold;">int</span> <span style="color: #6c3163; font-weight: bold;">main</span><span style="color: #3a81c3;">(){</span>
+  <span style="color: #ba2f59; font-weight: bold;">TimePoint</span> <span style="color: #715ab1;">t0</span> = <span style="color: #4e3163;">HRTime</span>::now<span style="color: #6c3163;">()</span>;
+  task<span style="color: #6c3163;">()</span>;
+  <span style="color: #ba2f59; font-weight: bold;">TimePoint</span> <span style="color: #715ab1;">t1</span> = <span style="color: #4e3163;">HRTime</span>::now<span style="color: #6c3163;">()</span>;
+  <span style="color: #ba2f59; font-weight: bold;">float</span> <span style="color: #715ab1;">duration</span> = <span style="color: #6c3163;">(</span><span style="color: #2d9574;">(</span><span style="color: #ba2f59; font-weight: bold;">FloatSecond</span><span style="color: #2d9574;">)(</span>t1 - t0<span style="color: #2d9574;">)</span><span style="color: #6c3163;">)</span>.count<span style="color: #6c3163;">()</span>;
+
+  <span style="color: #4e3163;">std</span>::cout &lt;&lt; duration &lt;&lt; <span style="color: #2d9574;">" second\n"</span>;
+<span style="color: #3a81c3;">}</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgheadline57" class="outline-2">
+<h2 id="orgheadline57"><span class="section-number-2">3</span> Python</h2>
+<div class="outline-text-2" id="text-3">
+</div><div id="outline-container-orgheadline56" class="outline-3">
+<h3 id="orgheadline56"><span class="section-number-3">3.1</span> Virtual Environments</h3>
+<div class="outline-text-3" id="text-3-1">
+</div><div id="outline-container-orgheadline54" class="outline-4">
+<h4 id="orgheadline54"><span class="section-number-4">3.1.1</span> <code>virtualenv</code></h4>
+<div class="outline-text-4" id="text-3-1-1">
+<p>
+<code>virtualenv</code> is a tool to create isolated Python environments. 
+</p>
+<ul class="org-ul">
+<li>Go to a folder, create an virtual environment with  <code>virtualenv -p /usr/bin/python2.7 envname</code></li>
+<li>Activate it: <code>source envname/bin/activate</code></li>
+<li>Use <code>python</code> or <code>pip</code> as usual (the versions are specified by the virtual environment)</li>
+<li>When done, <code>deactivate</code></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline55" class="outline-4">
+<h4 id="orgheadline55"><span class="section-number-4">3.1.2</span> <code>pip</code></h4>
+<div class="outline-text-4" id="text-3-1-2">
+<ul class="org-ul">
+<li><code>pip freeze &gt; requirements.txt</code> prints out installed packages</li>
+<li><code>pip install -r requirements.txt</code> install packages as specified in the file.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgheadline68" class="outline-2">
+<h2 id="orgheadline68"><span class="section-number-2">4</span> Others</h2>
+<div class="outline-text-2" id="text-4">
+</div><div id="outline-container-orgheadline65" class="outline-3">
+<h3 id="orgheadline65"><span class="section-number-3">4.1</span> Emacs</h3>
+<div class="outline-text-3" id="text-4-1">
+</div><div id="outline-container-orgheadline62" class="outline-4">
+<h4 id="orgheadline62"><span class="section-number-4">4.1.1</span> General</h4>
+<div class="outline-text-4" id="text-4-1-1">
+</div><ol class="org-ol"><li><a id="orgheadline58"></a>Modifier keys:<br  /><div class="outline-text-5" id="text-4-1-1-1">
+<ul class="org-ul">
+<li>C: Control; ⌃</li>
+<li>M: Meta; Alt; Option.⌥</li>
+</ul>
+</div></li>
+<li><a id="orgheadline59"></a>Cut and paste rectangle region<br  /><div class="outline-text-5" id="text-4-1-1-2">
+<ul class="org-ul">
+<li><code>C-x r k</code>: <code>kill-rectangle</code>, cut</li>
+<li><code>C-x r y</code>: <code>yank-rectangle</code>; paste. (be careful with the target lines)</li>
+</ul>
+</div></li>
+<li><a id="orgheadline60"></a>Search and replace<br  /><div class="outline-text-5" id="text-4-1-1-3">
+<ul class="org-ul">
+<li><code>C-s</code>: <code>isearch-forward</code>; incremental search forward</li>
+<li><code>C-r</code>: <code>isearch-backward</code>; incremental search forward</li>
+<li>Repeat <code>C-s</code> or <code>C-r</code> to move to the next or previous match.</li>
+</ul>
+</div></li>
+<li><a id="orgheadline61"></a>Moving cursor<br  /><div class="outline-text-5" id="text-4-1-1-4">
+<ul class="org-ul">
+<li><code>CM-n</code>: Move cursor to the next parentheses group.</li>
+<li><code>CM-p</code>: Move cursor to the previous parentheses group.</li>
+</ul>
+</div></li></ol>
+</div>
+
+<div id="outline-container-orgheadline63" class="outline-4">
+<h4 id="orgheadline63"><span class="section-number-4">4.1.2</span> Org-mode</h4>
+<div class="outline-text-4" id="text-4-1-2">
+<ul class="org-ul">
+<li><code>C-ce hh</code>: Export to html file</li>
+<li><code>C-cxl</code>: Toggle latex mask</li>
+<li><code>C-c .</code>: Insert current date</li>
+<li><code>C-ct</code>: Change status of a TODO task.</li>
+<li><code>C-x ns</code>: <code>org-narrow-to-subtree</code></li>
+<li><code>C-c c</code>: <code>org-capture</code></li>
+<li><code>C-cl</code>: Edit link address and content</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline64" class="outline-4">
+<h4 id="orgheadline64"><span class="section-number-4">4.1.3</span> Auctex</h4>
+<div class="outline-text-4" id="text-4-1-3">
+<ul class="org-ul">
+<li>Preview: <code>C-cpd</code></li>
+<li>Remove preview: <code>C-cpcd</code></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgheadline66" class="outline-3">
+<h3 id="orgheadline66"><span class="section-number-3">4.2</span> Bash</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li><code>pgrep keywords</code>: grep search by process name</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline67" class="outline-3">
+<h3 id="orgheadline67"><span class="section-number-3">4.3</span> Software Installation</h3>
+<div class="outline-text-3" id="text-4-3">
+<dl class="org-dl">
+<dt>Emacs</dt><dd><code>brew install emacs --HEAD --with-cocoa --with-gnutls --with-imagemagick</code></dd>
+</dl>
+<p>
+If you prefer a stable version, use <code>brew cask install emacs</code> to install from a stable binary release.
+</p>
+<dl class="org-dl">
+<dt>Openmp</dt><dd>The <code>gcc</code> that comes with Mac OS does not contain OpenMP, so we need to reinstall it: <code>brew reinstall gcc --without-multilib</code> Then use the newly installed <code>g++-6</code> or other later version.</dd>
+<dt>Save password for ssh</dt><dd></dd>
+</dl>
+<pre class="example">
+ssh-keygen
+brew install ssh-copy-id
+ssh-copy-id user@hostname
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Sen Lin</p>
+<p class="date">Created: 2017-01-05 Thu 10:22</p>
+<p class="validation"></p>
+</div>
+</body>
+</html>

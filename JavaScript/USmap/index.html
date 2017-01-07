@@ -1,0 +1,41 @@
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://d3js.org/topojson.v1.min.js"></script>
+
+<div id="usmap"></div>
+
+<script>
+ function value_to_color(value, minValue, maxValue) {
+     if (value != null) {
+         value = (value - minValue) / (maxValue - minValue);
+         let hue = Math.round(255 * (1 - value));
+         return d3.hsl(hue, 1, 0.5).toString();
+     } else {
+         return 'white';
+     }
+ }
+
+ $(function () {// Execute when document is ready
+     d3.json('us-counties.json', function (err, us) {
+         // Initialize the map
+         d3.select('#usmap')
+           .append("svg").attr("width", 900).attr("height", 500)
+           .selectAll("path")
+           .data(topojson.feature(us, us.objects.counties).features)
+           .enter().append("path")
+           .attr("d", d3.geo.path())
+           .style('stroke', '#777').style('fill', 'white');
+
+         // Update color from data
+         d3.json('data.json', function (err, data) {
+             var minValue = d3.min(d3.values(data));
+             var maxValue = d3.max(d3.values(data));
+             d3.select('#usmap').selectAll('svg').selectAll('path')
+               .style('fill', function (feature) {
+                   return value_to_color(data[feature.id], minValue, maxValue);
+               });
+         });
+     });
+ });
+
+</script>

@@ -1,0 +1,9 @@
+#+TITLE: US map
+#+AUTHOR: Sen Lin
+
+* About
+This is a minimum viable demo about showing us counties color-coded with external data.
+
+* How to use
+- Start a http server: ~python -m SimpleHTTPServer 8000~
+- Visit ~localhost:8000~ in a web browser.

@@ -19,3 +19,6 @@ Gradle expects a Java project follows this hierarchy:
 The directories can be created via =mkdir -p src/{main,test}/{java,resources}=
 
 
+
+** Create gradle file
+The minimum ~build.gradle~ requires Java plugin and entry point defined.

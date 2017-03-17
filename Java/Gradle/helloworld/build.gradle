@@ -1,5 +1,6 @@
-apply plugin: 'java'
+apply plugin: 'java' // Predefined tasks for Java project
 
+// Define the entry point for the compiled jar file
 jar {
   manifest {
     attributes(

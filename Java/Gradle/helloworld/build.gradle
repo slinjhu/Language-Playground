@@ -8,3 +8,12 @@ jar {
      )
   }
 }
+
+repositories {
+    // Use 'jcenter' for resolving your dependencies.
+    jcenter()
+}
+
+dependencies {    
+    testCompile 'junit:junit:4.12'
+}

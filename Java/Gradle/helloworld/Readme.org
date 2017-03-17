@@ -1,0 +1,21 @@
+#+TITLE: Gradle Hello World
+
+* Start from scratch
+** Create directory hierarchy
+Gradle expects a Java project follows this hierarchy:
+
+#+BEGIN_EXAMPLE
+├── build.gradle
+└── src
+    ├── main
+    │   ├── java
+    │   │   └── Hello.java
+    │   └── resources
+    └── test
+        ├── java
+        └── resources
+#+END_EXAMPLE
+
+The directories can be created via =mkdir -p src/{main,test}/{java,resources}=
+
+

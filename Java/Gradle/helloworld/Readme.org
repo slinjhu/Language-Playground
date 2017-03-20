@@ -22,3 +22,8 @@ The directories can be created via =mkdir -p src/{main,test}/{java,resources}=
 
 ** Create gradle file
 The minimum ~build.gradle~ requires Java plugin and entry point defined.
+
+* Build and run
+To build: ~gradle build~
+
+To run: ~java -jar build/libs/helloworld.jar~

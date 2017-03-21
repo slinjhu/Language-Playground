@@ -278,6 +278,17 @@ class Puppy implements Animal.Dog{}
 
 ** Garbage Collection
 
+* Java Spring
+** Concepts
+*** POJO (Plain Old Java Object)
+- any lightweight simple object with on extra stuff
+
+*** JavaBean
+- A JavaBean is a Java object that is *serializable*, has a public no-argument constructor, and allows access to properties using getters and setters.
+- JavaBean is POJO that follows specific naming conventions.
+
+*** IoC (Inversion of Control)
+*** DI (Dependency Injection)
 
 * C++
 ** Features

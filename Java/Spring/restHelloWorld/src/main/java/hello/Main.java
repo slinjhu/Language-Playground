@@ -39,15 +39,44 @@ class Greeting {
     public void setMessage(String message) {
         this.message = message;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Greeting greeting = (Greeting) o;
+
+        if (name != null ? !name.equals(greeting.name) : greeting.name != null) return false;
+        return message != null ? message.equals(greeting.message) : greeting.message == null;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = name != null ? name.hashCode() : 0;
+        result = 31 * result + (message != null ? message.hashCode() : 0);
+        return result;
+    }
 }
 
 @RestController
 class Controller{
+    /**
+     * Pass information by query variables
+     * @param name Name of the person to be greeted.
+     * @return An object of type Greeting
+     */
     @GetMapping("/query")
-    public Greeting sayHello1(@RequestParam(value = "name", defaultValue = "Sen") String name){
+    public Greeting sayHello1(@RequestParam(value = "name", defaultValue = "World") String name){
         return new Greeting(name);
     }
 
+    /**
+     * Pass information by path variables
+     * @param name Name of the person to be greeted.
+     * @return An object of type Greeting
+     */
     @GetMapping("/path/{name}")
     public Greeting sayHello2(@PathVariable("name") String name){
         return new Greeting(name);

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-
+import lombok.Data;
 import javax.persistence.*;
 
 
@@ -20,6 +20,7 @@ public class Main {
 }
 
 @Entity
+@Data
 @Table(name = "book")
 class Book {
     @Id
@@ -30,30 +31,6 @@ class Book {
     private String title;
 
     private String author;
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
-    }
 }
 
 

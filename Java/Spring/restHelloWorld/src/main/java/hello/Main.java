@@ -1,5 +1,6 @@
 package hello;
 
+import lombok.Data;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +15,7 @@ public class Main {
     }
 }
 
-
+@Data
 class Greeting {
     private String name;
     private String message;
@@ -22,41 +23,6 @@ class Greeting {
     public Greeting(String name){
         this.name = name;
         message = "Hello to " + this.name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Greeting greeting = (Greeting) o;
-
-        if (name != null ? !name.equals(greeting.name) : greeting.name != null) return false;
-        return message != null ? message.equals(greeting.message) : greeting.message == null;
-
-    }
-
-    @Override
-    public int hashCode() {
-        int result = name != null ? name.hashCode() : 0;
-        result = 31 * result + (message != null ? message.hashCode() : 0);
-        return result;
     }
 }
 

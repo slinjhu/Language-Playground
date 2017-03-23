@@ -1,5 +1,7 @@
 package data;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -22,6 +24,8 @@ public class Main {
 
 @Entity
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "book")
 class Book {
     @Id
@@ -58,6 +62,12 @@ class Controller {
         return _repository.findByAuthor(author);
     }
 
+    /**
+     * Find a book by author and year.
+     * @param author The target author provided using a request parameter
+     * @param year The target year provided using a request parameter
+     * @return
+     */
     @GetMapping("/find")
     public Iterable<Book> findBookByAuthorAndYear(
         @RequestParam("author") String author,
@@ -66,8 +76,42 @@ class Controller {
         return _repository.findByAuthorAndYear(author, year);
     }
 
+    /**
+     * Find all books in the database
+     * @return all books as a JSON list
+     */
     @GetMapping("/allbooks")
     public Iterable<Book> allBooks(){
+        return _repository.findAll();
+    }
+
+    /**
+     * Delete all books with the given author
+     * @param author provided using path variable
+     * @return All books after deletion.
+     */
+
+    @GetMapping("/deleteauthor/{author}")
+    public Iterable<Book> deleteByAuthor(@PathVariable("author") String author){
+        _repository.delete(_repository.findByAuthor(author));
+        return _repository.findAll();
+    }
+
+    /**
+     * Add a new book to the database
+     * @param author provided in request parameters
+     * @param title provided in request parameters
+     * @param year provided in request parameters
+     * @return All books including the newly added ones
+     */
+
+    @GetMapping("/add")
+    public Iterable<Book> addBooks(
+        @RequestParam("author") String author,
+        @RequestParam("title") String title,
+        @RequestParam("year") int year
+    ){
+        _repository.save(new Book(0, title, author, year));
         return _repository.findAll();
     }
 }

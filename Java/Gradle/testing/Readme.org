@@ -1,29 +1,29 @@
-#+TITLE: Gradle Hello World
+#+TITLE: Testing in Gradle
 
-* Start from scratch
-** Create directory hierarchy
-Gradle expects a Java project follows this hierarchy:
-
+* Source code hierarchy
 #+BEGIN_EXAMPLE
 ├── build.gradle
 └── src
+    ├── intest
+    │   ├── java
+    │   │   └── hello
+    │   │       └── HelloIntest.java
+    │   └── resources
     ├── main
     │   ├── java
-    │   │   └── Hello.java
+    │   │   └── hello
+    │   │       └── Hello.java
     │   └── resources
     └── test
         ├── java
+        │   └── hello
+        │       └── HelloTest.java
         └── resources
 #+END_EXAMPLE
 
-The directories can be created via =mkdir -p src/{main,test}/{java,resources}=
+The directories can be created via =mkdir -p src/{main,test,intest}/{java,resources}=
 
-
-
-** Create gradle file
-The minimum ~build.gradle~ requires Java plugin and entry point defined.
-
-* Build and run
-To build: ~gradle build~
-
-To run: ~java -jar build/libs/helloworld.jar~
+* Build and test
+- A successful build depends both on unit test (~test~) and integration test (~intest~). 
+- To run unit test separately: ~gradle test~
+- To run integration test separately: ~gradle intest~

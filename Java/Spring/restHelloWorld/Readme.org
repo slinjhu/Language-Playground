@@ -1,6 +1,0 @@
-#+TITLE: Demo of restful server using Spring
-
-* How to run
-- Build using gradle: ~gradle build~
-- Run the jar file: ~java -jar build/libs/*.jar~
-- The server is up on localhost at port number 8080: ~http://localhost:8080/greeting?name=Sen~

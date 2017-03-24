@@ -1,3 +1,5 @@
+package hello;
+
 import org.junit.Test;
 import org.junit.Before;
 import org.junit.After;
@@ -5,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-public class HelloTest{
+public class HelloIntest{
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
     @Before

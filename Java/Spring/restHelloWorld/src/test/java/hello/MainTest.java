@@ -1,55 +1,79 @@
 package hello;
 
-
+import lombok.SneakyThrows;
 import org.junit.Before;
 import org.junit.Test;
+
 import static org.junit.Assert.assertEquals;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 import org.junit.runner.RunWith;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.context.web.WebAppConfiguration;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration
-@WebAppConfiguration
+
+@RunWith(SpringRunner.class)
+@SpringBootTest
+@AutoConfigureMockMvc
 public class MainTest {
-    private MockMvc mockMvc;
-    private final String name = "Sen";
-    private Greeting mockGreeting;
+  @Autowired
+  private MockMvc mockMvc;
 
-    @Before
-    public void setup(){
-        mockGreeting = new Greeting(name);
-    }
+  private final String me = "Sen";
+  private Greeting greetingMe;
+  private Greeting greetingWorld;
 
-    @Test
-    public void unitTest(){
-        Controller controller = new Controller();
-        assertEquals(mockGreeting, controller.sayHello1(name));
-        assertEquals(mockGreeting, controller.sayHello2(name));
-    }
 
-    @Test
-    public void integrationTest(){
-        try {
-            mockMvc.perform(get("/query?name=Sen"))
-                    .andExpect(status().isOk());
-            // TODO: check if the content is correct
+  @Before
+  public void setup() {
+    greetingMe = new Greeting(me);
+    greetingWorld = new Greeting("World");
+  }
 
-            mockMvc.perform(get("/query"))
-                    .andExpect(status().isOk());
-            // TODO: check if the content is with name "World"
+  @Test
+  public void unitTest() {
+    Controller controller = new Controller();
+    assertEquals(greetingMe, controller.sayHello1(me));
+    assertEquals(greetingMe, controller.sayHello2(me));
+  }
 
-            mockMvc.perform(get("/path/Sen"))
-                    .andExpect(status().isOk());
-            // TODO: check if the content is with name "Sen"
+  @Test
+  @SneakyThrows
+  public void testLegalQuery() {
+    mockMvc.perform(get(String.format("/query?name=%s", me)))
+        .andExpect(status().isOk())
+        .andExpect(content().contentType("application/json;charset=UTF-8"))
+        .andExpect(jsonPath("$.name").value(greetingMe.getName()))
+        .andExpect(jsonPath("$.message").value(greetingMe.getMessage()));
+  }
 
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+  @Test
+  @SneakyThrows
+  public void testDefaultQuery() {
+    mockMvc.perform(get("/query"))
+        .andExpect(status().isOk())
+        .andExpect(content().contentType("application/json;charset=UTF-8"))
+        .andExpect(jsonPath("$.name").value(greetingWorld.getName()))
+        .andExpect(jsonPath("$.message").value(greetingWorld.getMessage()));
+  }
 
+  @Test
+  @SneakyThrows
+  public void testLegalPath() {
+    mockMvc.perform(get(String.format("/path/%s", me)))
+        .andExpect(status().isOk())
+        .andExpect(content().contentType("application/json;charset=UTF-8"))
+        .andExpect(jsonPath("$.name").value(greetingMe.getName()))
+        .andExpect(jsonPath("$.message").value(greetingMe.getMessage()));
+  }
+
+  @Test
+  @SneakyThrows
+  public void testIllegalPath() {
+    mockMvc.perform(get("/path"))
+        .andExpect(status().is4xxClientError());
+  }
 }

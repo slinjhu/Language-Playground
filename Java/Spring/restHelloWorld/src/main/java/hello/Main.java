@@ -29,7 +29,7 @@ class Greeting {
 @RestController
 class Controller{
     /**
-     * Pass information by query variables
+     * Pass information by request parameters
      * @param name Name of the person to be greeted.
      * @return An object of type Greeting
      */

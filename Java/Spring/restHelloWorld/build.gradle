@@ -8,12 +8,9 @@ buildscript {
 }
 
 apply plugin: 'java'
-apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 
 jar {
-    baseName = 'gs-rest-service'
-    version =  '0.1.0'
     manifest {attributes('Main-Class': 'Main')}
 }
 
@@ -21,11 +18,33 @@ repositories {
     mavenCentral()
 }
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
-
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-web")
+    compile "org.springframework.boot:spring-boot-starter-web"
     compile "org.projectlombok:lombok:1.16.14"
-    testCompile('org.springframework.boot:spring-boot-starter-test')
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
 }
+
+// Define integration test
+sourceSets {
+    intest {
+        java {
+            compileClasspath += main.output + test.output
+            runtimeClasspath += main.output + test.output
+            srcDir file('src/intest/java')
+        }
+        resources.srcDir file('src/intest/resources')
+    }
+}
+
+configurations {
+    intestCompile.extendsFrom testCompile
+    intestRuntime.extendsFrom testRuntime
+}
+
+task intest(type: Test) {
+    testClassesDir = sourceSets.intest.output.classesDir
+    classpath = sourceSets.intest.runtimeClasspath
+    outputs.upToDateWhen {false}
+}
+check.dependsOn intest
+intest.mustRunAfter test

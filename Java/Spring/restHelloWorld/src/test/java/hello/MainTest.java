@@ -11,6 +11,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -45,7 +46,7 @@ public class MainTest {
   public void testLegalQuery() {
     mockMvc.perform(get(String.format("/query?name=%s", me)))
         .andExpect(status().isOk())
-        .andExpect(content().contentType("application/json;charset=UTF-8"))
+        .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
         .andExpect(jsonPath("$.name").value(greetingMe.getName()))
         .andExpect(jsonPath("$.message").value(greetingMe.getMessage()));
   }
@@ -55,7 +56,7 @@ public class MainTest {
   public void testDefaultQuery() {
     mockMvc.perform(get("/query"))
         .andExpect(status().isOk())
-        .andExpect(content().contentType("application/json;charset=UTF-8"))
+        .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
         .andExpect(jsonPath("$.name").value(greetingWorld.getName()))
         .andExpect(jsonPath("$.message").value(greetingWorld.getMessage()));
   }
@@ -65,7 +66,7 @@ public class MainTest {
   public void testLegalPath() {
     mockMvc.perform(get(String.format("/path/%s", me)))
         .andExpect(status().isOk())
-        .andExpect(content().contentType("application/json;charset=UTF-8"))
+        .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
         .andExpect(jsonPath("$.name").value(greetingMe.getName()))
         .andExpect(jsonPath("$.message").value(greetingMe.getMessage()));
   }
